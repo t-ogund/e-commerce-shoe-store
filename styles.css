@@ -1,3 +1,47 @@
-.carousel-item {
-    height: 50vh;
+/* body, .container-fluid {
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+    padding: 0;
+}
+
+.caro {
+    margin-bottom: 10px;
+}
+
+.carousel-item img {
+    /* margin: 0 auto; */
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.mid-left {
+    background-image: url("img/women-workout-class.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.mid-right {
+    background-image: url("img/yellow-casual-shoes.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+.flint {
+    width: 25%;
+    height: 200px;
+    background-image: url("img/flint-13.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

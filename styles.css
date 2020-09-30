@@ -33,19 +33,113 @@ body {
     background-size: cover;
 }
 
-.container-fluid {
+/* .container-fluid {
     overflow: hidden;
-}
+} */
 
 .flint {
     height: 200px;
     background-image: url("img/flint-13.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.jordan-4 {
+    height: 200px;
+    background-image: url("img/cement-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.mamba {
+    height: 200px;
+    background-image: url("img/mamba.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.kd {
+    height: 200px;
+    background-image: url("img/kd.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.odell {
+    height: 200px;
+    background-image: url("img/odell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.pharell {
+    height: 200px;
+    background-image: url("img/pharell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.ivo {
+    height: 200px;
+    background-image: url("img/ivo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.red-black {
+    height: 200px;
+    background-image: url("img/redblack-cleats.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     object-fit: cover;
 }
 
 .filter {
     border: 1px solid black;
 }
+
+.card-icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5% 0 5%;
+    padding: 2%;
+}
+
+i {
+    font-size: 1.5rem
+}
+
+.card {
+    margin: 1rem 0 .5rem 0;
+    text-align: center;
+}
+
+.row-1 {
+    background-color: blue;
+    display: flex;
+}
+
+
+/* .gallery {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .gallery {
+    height: 100vh;
+} */

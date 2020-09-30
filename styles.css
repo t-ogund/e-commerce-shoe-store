@@ -38,10 +38,14 @@ body {
 }
 
 .flint {
-    width: 25%;
     height: 200px;
     background-image: url("img/flint-13.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    object-fit: cover;
+}
+
+.filter {
+    border: 1px solid black;
 }

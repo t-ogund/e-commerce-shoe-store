@@ -33,9 +33,9 @@ body {
     background-size: cover;
 }
 
-/* .container-fluid {
+.container-fluid {
     overflow: hidden;
-} */
+}
 
 .flint {
     height: 200px;
@@ -109,8 +109,80 @@ body {
     object-fit: cover;
 }
 
+.women-1 {
+    height: 200px;
+    background-image: url("img/women-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-2 {
+    height: 200px;
+    background-image: url("img/women-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-3 {
+    height: 200px;
+    background-image: url("img/women-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-4 {
+    height: 200px;
+    background-image: url("img/women-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-5 {
+    height: 200px;
+    background-image: url("img/women-5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-6 {
+    height: 200px;
+    background-image: url("img/women-6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-7 {
+    height: 200px;
+    background-image: url("img/women-8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+.women-8 {
+    height: 200px;
+    background-image: url("img/women-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
 .filter {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .card-icons {
@@ -132,6 +204,337 @@ i {
 .row-1 {
     background-color: blue;
     display: flex;
+}
+
+/* Big Product Images */
+
+.product-1 {
+    height: 500px;
+    background-image: url("img/flint-13.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-2 {
+    height: 500px;
+    background-image: url("img/cement-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-3 {
+    height: 500px;
+    background-image: url("img/mamba.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-4 {
+    height: 500px;
+    background-image: url("img/kd.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-5 {
+    height: 500px;
+    background-image: url("img/odell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-6 {
+    height: 500px;
+    background-image: url("img/pharell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-7 {
+    height: 500px;
+    background-image: url("img/ivo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product-8 {
+    height: 500px;
+    background-image: url("img/redblack-cleats.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-1 {
+    height: 500px;
+    background-image: url("img/women-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-2 {
+    height: 500px;
+    background-image: url("img/women-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-3 {
+    height: 500px;
+    background-image: url("img/women-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-4 {
+    height: 500px;
+    background-image: url("img/women-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-5 {
+    height: 500px;
+    background-image: url("img/women-5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-6 {
+    height: 500px;
+    background-image: url("img/women-6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-7 {
+    height: 500px;
+    background-image: url("img/women-7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.women-product-8 {
+    height: 500px;
+    background-image: url("img/women-8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
+
+/* Small Product Images */
+
+.product-1-small-image {
+    height: 100px;
+    background-image: url("img/flint-13.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-2-small-image {
+    height: 100px;
+    background-image: url("img/cement-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-3-small-image {
+    height: 100px;
+    background-image: url("img/mamba.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-4-small-image {
+    height: 100px;
+    background-image: url("img/kd.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-5-small-image {
+    height: 100px;
+    background-image: url("img/odell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-6-small-image {
+    height: 100px;
+    background-image: url("img/pharell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-7-small-image {
+    height: 100px;
+    background-image: url("img/ivo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.product-8-small-image {
+    height: 100px;
+    background-image: url("img/redblack-cleats.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-1-small-image {
+    height: 100px;
+    background-image: url("img/women-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-2-small-image {
+    height: 100px;
+    background-image: url("img/women-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-3-small-image {
+    height: 100px;
+    background-image: url("img/women-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-4-small-image {
+    height: 100px;
+    background-image: url("img/women-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-5-small-image {
+    height: 100px;
+    background-image: url("img/women-5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-6-small-image {
+    height: 100px;
+    background-image: url("img/women-6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-7-small-image {
+    height: 100px;
+    background-image: url("img/women-7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.women-product-8-small-image {
+    height: 100px;
+    background-image: url("img/women-8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+    width: 50%;
+}
+
+.size-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.size-box {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.size-box:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.add-to-cart {
+    width: 100%;
 }
 
 

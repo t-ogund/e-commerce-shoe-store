@@ -551,6 +551,10 @@ a  p, a h6:hover {
     text-decoration: none;
 }
 
+.select-shoe-size {
+    color: red;
+}
+
 
 /* .gallery {
     display: flex;

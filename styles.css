@@ -555,6 +555,14 @@ a  p, a h6:hover {
     color: red;
 }
 
+.modal-view-cart-button {
+    width: 100%;
+}
+
+.item-price-section {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* .gallery {
     display: flex;

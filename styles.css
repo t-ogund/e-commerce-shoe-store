@@ -537,6 +537,20 @@ i {
     width: 100%;
 }
 
+.order-summary-list {
+    height: 500px;
+}
+
+a  p, a h6 {
+    color: black;
+    text-decoration: none;
+}
+
+a  p, a h6:hover {
+    color: black;
+    text-decoration: none;
+}
+
 
 /* .gallery {
     display: flex;

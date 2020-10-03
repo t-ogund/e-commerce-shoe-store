@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container-fluid p-0">
-        <div class="row">
+        <div class="row mb-5">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <a class="navbar-brand" href="#">Shoe Store</a>
@@ -38,11 +38,6 @@
                             <a class="dropdown-item" href="womens.html">Women's Shoes</a>
                           </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="cart.html" aria-haspopup="true" aria-expanded="false">
-                              <i class="fas fa-shopping-cart"></i>
-                            </a>
-                          </li>
                       </ul>
                     </div>
                   </nav>
@@ -53,71 +48,42 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Product Page</h1>
+                <h1>My Cart</h1>
             </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 product-1">
+            <div class="col-md-8 order-summary-list bg-dark">
 
             </div>
-            <div class="col-md-4">
-                <div class="product-info">
-                    <h2>Product Name</h2>
-                    <p>Men's</p>
-                    <p>placeholder (review info)</p>
-                </div>
-                <div class="product-1-small-image">
-                    <!-- <img src="img/flint-13.jpg" alt=""> -->
-                </div>
-                <div class="product-1-price">
-                    <p>$190.00</p>
-                </div>
-                <div class="size-section">
-                    <div class="size-box">
-                        07.5
+            <div class="col-md-4 order-summary-breakdown">
+
+                <div class="col-md-12 bg-danger">
+                    <div class="order-summary-title">
+                        <h2>Order Summary</h2>
                     </div>
-                    <div class="size-box">
-                        08.0
+                    <div class="subtotal-section">
+
                     </div>
-                    <div class="size-box">
-                        08.5
+                    <div class="shipping-section">
+                        <p>Standard:</p>
+                        <p>3 - 5 Business Days</p>
                     </div>
-                    <div class="size-box">
-                        09.0
+                    <div class="discount-section">
+                        <p>Discounts: </p>
+                        <p>$0.00</p>
                     </div>
-                    <div class="size-box">
-                        09.5
-                    </div>
-                    <div class="size-box">
-                        10.0
-                    </div>
-                    <div class="size-box">
-                        10.5
-                    </div>
-                    <div class="size-box">
-                        11.0
-                    </div>
-                    <div class="size-box">
-                        11.5
-                    </div>
-                    <div class="size-box">
-                        12.0
-                    </div>
-                    <div class="size-box">
-                        13.0
-                    </div>
-                    <div class="size-box">
-                        14.0
-                    </div>
-                    <div class="size-box">
-                        15.0
+                    <div class="final-total">
+                        <p>Total: </p>
+                        <p>$115.00</p>
                     </div>
                 </div>
+                
+                
                 <div class="col-md-12 mt-3 p-1">
-                    <button type="button" class="btn btn-dark add-to-cart">Add to Cart</button>
+                    <button type="button" class="btn btn-dark add-to-cart">Guest Checkout</button>
                 </div>
             </div>
         </div>

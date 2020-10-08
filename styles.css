@@ -564,6 +564,10 @@ a  p, a h6:hover {
     justify-content: space-between;
 }
 
+.hide {
+    display: none;
+}
+
 /* .gallery {
     display: flex;
     flex-wrap: wrap;

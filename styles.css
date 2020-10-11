@@ -568,6 +568,23 @@ a  p, a h6:hover {
     display: none;
 }
 
+.new-new-li {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.cart-left-column {
+    background-color: salmon;
+    /* height: 35px; */
+    border: 1px solid black;
+}
+
+.cart-right-column {
+    background-color: plum;
+    /* height: 100px; */
+    border: 1px solid black;
+}
+
 /* .gallery {
     display: flex;
     flex-wrap: wrap;

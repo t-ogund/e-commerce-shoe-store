@@ -11,6 +11,8 @@ let productPrice = document.querySelector(".product-price");
 let modal = document.querySelector(".modal");
 let orderSummaryList = document.querySelector(".order-summary-list");
 
+
+
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
     
@@ -66,17 +68,65 @@ for (let i = 0; i < addToCartButton.length; i++) {
             localStorage.setItem("shoe", JSON.stringify(cartArray));
             console.log(cartArray);
 
-            let orderSummaryList = document.querySelector(".order-summary-list");
-            let orderSummaryProductHeading = document.createElement("p");
-            orderSummaryProductHeading.textContent = "hi";
-            orderSummaryList.appendChild(orderSummaryProductHeading);
+            
+                
         }
         // cart.pop();
         // console.log(cart);
         // console.log(addToCartButton);
+        
+        
     })
     
+    
 }
+
+let summaryListItems = document.querySelector(".summary-list-items")
+// console.log(summaryListItems)
+
+let myCart = JSON.parse(localStorage.getItem("shoe"));
+
+for (let i = 0; i < myCart.length; i++) {
+    let cartRowItem = document.createElement("div");
+    cartRowItem.classList.add("row", "cart-row-item");
+    let newCartRowColOne = document.createElement("div");
+    newCartRowColOne.classList.add("col-lg-4", "cart-left-column");
+    let newCartRowColTwo = document.createElement("div");
+    newCartRowColTwo.classList.add("col-lg-8", "cart-right-column");
+    orderSummaryList.appendChild(cartRowItem);
+    cartRowItem.appendChild(newCartRowColOne);
+    cartRowItem.appendChild(newCartRowColTwo);
+    console.log(newCartRowColTwo);
+    // let newNewLi = document.createElement("li");
+    // newNewLi.textContent = myCart[i].productName;
+    // summaryListItems.appendChild(newNewLi);
+    // newNewLi.classList.add("new-new-li")
+    // let newLiRow = document.createElement("div");
+    // newLiRow.classList.add("row");
+    
+    // newLiRow.appendChild(newLiColOne);
+    // newLiRow.appendChild(newLiColTwo);
+    // newNewLi.appendChild(newLiRow);    
+}
+
+let cartRightCol = document.querySelectorAll(".cart-right-column");
+    for (let i = 0; i < cartRightCol.length; i++) {
+        // product name
+        let cartProductName = document.createElement("h5");
+        cartProductName.classList.add("cart-product-name");
+        cartProductName.textContent = myCart[i].productName;
+        cartRightCol[i].appendChild(cartProductName);
+        // product size
+        let cartProductSize = document.createElement("p");
+        cartProductSize.classList.add("cart-product-size");
+        cartProductSize.textContent = myCart[i].productSize;
+        cartRightCol[i].appendChild(cartProductSize);
+        // product price
+        let cartProductPrice = document.createElement("p");
+        cartProductPrice.classList.add("cart-product-price");
+        cartProductPrice.textContent = myCart[i].productPrice;
+        cartRightCol[i].appendChild(cartProductPrice);
+    }
 
 
 

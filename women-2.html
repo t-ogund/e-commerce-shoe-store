@@ -10,6 +10,74 @@
 </head>
 <body>
     <div class="container-fluid p-0">
+
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Item Added To Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-3 women-product-1-small-image modal-image">
+
+                        </div>
+                        <div class="col-9">
+                            <h6 class="modal-product-name">
+
+                            </h6>
+                            <p class="modal-sex">
+
+                            </p>
+                            <p>Qty 1</p>
+                            <p class="item-id">
+                                1
+                            </p>
+                            <p class="modal-size">
+
+                            </p>
+                            <p class="modal-price">
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-9">
+                            <div class="item-price-section">
+                                <p class="number-of-items">
+                                    1 item
+                                </p>
+                                <p class="modal-subtotal">
+                                    $200.00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- <button type="button" class="btn btn-light modal-view-cart-button">View Cart</button> -->
+                            <a href="cart.html" type="button" class="btn btn-light modal-view-cart-button">View Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+        </div>
+    </div>
+
+
         <div class="row mb-5">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -65,15 +133,15 @@
             </div>
             <div class="col-md-4">
                 <div class="product-info">
-                    <h2>In Season 9 Training Shoe</h2>
-                    <p>Women's</p>
+                    <h2 class="name-of-shoe">In Season 9 Training Shoe</h2>
+                    <p class="gender">Women's</p>
                     <p>placeholder (review info)</p>
                 </div>
                 <div class="women-product-2-small-image">
                     <!-- <img src="img/flint-13.jpg" alt=""> -->
                 </div>
                 <div class="product-2-price">
-                    <p>$190.00</p>
+                    <p class="actual-product-price">$190.00</p>
                 </div>
                 <div class="size-section">
                     <div class="size-box">
@@ -115,9 +183,15 @@
                     <div class="size-box">
                         15.0
                     </div>
+                    <div>
+                        <p class="select-shoe-size"></p>
+                    </div>
                 </div>
                 <div class="col-md-12 mt-3 p-1">
-                    <button type="button" class="btn btn-dark add-to-cart">Add to Cart</button>
+                    <!-- <button type="button" class="btn btn-dark add-to-cart">Add to Cart</button> -->
+                    <button type="button" class="btn btn-dark add-to-cart" data-toggle="modal" data-target="#exampleModal">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>

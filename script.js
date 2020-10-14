@@ -154,18 +154,61 @@ let cartLeftColNodeList = document.querySelectorAll(".cart-left-col-img");
       // console.log(myCart[j].productImage);
     }
 
-console.log(myCart);
-console.log(modalImage);
+// console.log(myCart);
+// console.log(modalImage);
+
+
+      
 
 let cartDeleteButton = document.querySelectorAll(".delete-button");
 let cartRowItems = document.querySelectorAll(".cart-row-item");
+let retrievedMyCartItems = localStorage.getItem("shoe");
+
+let toArrayOfObjects = JSON.parse(retrievedMyCartItems);
 for (let d = 0; d < cartDeleteButton.length; d++) {
-  for (let c = 0; c < cartRowItems.length; c++) {
-    cartDeleteButton[d].addEventListener("click", function() {
-      cartRowItems[d].style.display = "none";
-    })
-  }
+  cartDeleteButton[d].addEventListener("click", function() {
+    
+    // console.log(d, retrievedMyCartItems);
+      // let index = toArrayOfObjects.indexOf(d);
+      for (let p = 0; p < toArrayOfObjects.length; p++) {
+        // console.log(p, toArrayOfObjects[p]);
+        toArrayOfObjects.splice(d, 1);
+        localStorage.setItem("shoe", JSON.stringify(toArrayOfObjects));
+          // toArrayOfObjects.splice(d, 1);
+          // console.log(d, toArrayOfObjects)
+          // if (toArrayOfObjects.length === 1) {
+          //   cartDeleteButton[d].addEventListener("click", function() {
+          //     toArrayOfObjects.pop();
+          //   })
+          // }
+          
+        // if (d == p) {
+        //   toArrayOfObjects.splice(d, 1);
+        //   console.log("updated", toArrayOfObjects);
+        //   localStorage.setItem("shoe", JSON.stringify(cartArray));
+          // localStorage.setItem("shoe", JSON.stringify(cartArray));
+        // }
+      }
+      console.log("new array", toArrayOfObjects, toArrayOfObjects.length)
+      
+
+      for (let c = 0; c < cartRowItems.length; c++) {
+        cartRowItems[d].style.display = "none";
+      }
+  })
+  
 }
+
+
+// for (let d = 0; d < cartDeleteButton.length; d++) {
+//   for (let c = 0; c < cartRowItems.length; c++) {
+//     cartDeleteButton[d].addEventListener("click", function() {
+//       cartRowItems[d].style.display = "none";
+//     })
+//     console.log(retrievedMyCartItems)
+//   }
+  
+// }
 
 // let productImages = ["img/men-1.jpg", "img/men-2.jpg", "img/men-3.jpg", "img/men-4.jpg", 
 // "img/men-5.jpg", "img/men-6.jpg", "img/men-7.jpg", "img/men-8.jpg"]

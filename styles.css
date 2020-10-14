@@ -37,72 +37,72 @@ body {
     overflow: hidden;
 }
 
-.flint {
+.men-1 {
     height: 200px;
-    background-image: url("img/flint-13.jpg");
+    background-image: url("img/men-1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.jordan-4 {
+.men-2 {
     height: 200px;
-    background-image: url("img/cement-4.jpg");
+    background-image: url("img/men-2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.mamba {
+.men-3 {
     height: 200px;
-    background-image: url("img/mamba.jpg");
+    background-image: url("img/men-3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.kd {
+.men-4 {
     height: 200px;
-    background-image: url("img/kd.jpg");
+    background-image: url("img/men-4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.odell {
+.men-5 {
     height: 200px;
-    background-image: url("img/odell.jpg");
+    background-image: url("img/men-5.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.pharell {
+.men-6 {
     height: 200px;
-    background-image: url("img/pharell.jpg");
+    background-image: url("img/men-6.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.ivo {
+.men-7 {
     height: 200px;
-    background-image: url("img/ivo.jpg");
+    background-image: url("img/men-7.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: cover;
 }
 
-.red-black {
+.men-8 {
     height: 200px;
-    background-image: url("img/redblack-cleats.jpg");
+    background-image: url("img/men-8.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -165,7 +165,7 @@ body {
 
 .women-7 {
     height: 200px;
-    background-image: url("img/women-8.jpg");
+    background-image: url("img/women-7.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -174,7 +174,7 @@ body {
 
 .women-8 {
     height: 200px;
-    background-image: url("img/women-1.jpg");
+    background-image: url("img/women-8.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

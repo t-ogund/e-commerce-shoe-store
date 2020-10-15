@@ -17,14 +17,11 @@ let itemID = document.querySelector(".item-id");
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
   sizeBox[i].addEventListener("click", function () {
-    console.log(sizeBox[i].textContent);
+    // console.log(sizeBox[i].textContent);
     cart.push(sizeBox[i].textContent);
   });
 }
 
-// let cartArray = [];
-//             cartArray.push(JSON.parse(localStorage.getItem("shoe")));
-//             localStorage.setItem("shoe", JSON.stringify(cartArray));
 for (let i = 0; i < addToCartButton.length; i++) {
   addToCartButton[i].addEventListener("click", function () {
     if (cart.length < 1) {
@@ -33,14 +30,14 @@ for (let i = 0; i < addToCartButton.length; i++) {
     } else {
       shoeSizeWarning.style.display = "none";
       addToCartButton[i].setAttribute("data-toggle", "modal");
-      console.log(
-        `${nameOfShoe.textContent}, size ${
-          cart[cart.length - 1]
-        } added to cart!`
-      );
+      // console.log(
+      //   `${nameOfShoe.textContent}, size ${
+      //     cart[cart.length - 1]
+      //   } added to cart!`
+      // );
       modalProductName.textContent = nameOfShoe.textContent;
       modalSex.textContent = gender.textContent;
-      console.log(modalProductName);
+      // console.log(modalProductName);
       modalPrice.textContent = actualProductPrice.textContent;
 
       modalSize.textContent = `Size: ${cart[cart.length - 1]}`;
@@ -50,33 +47,17 @@ for (let i = 0; i < addToCartButton.length; i++) {
         productSize: `${modalSize.textContent}`,
         productSex: `${modalSex.textContent}`,
         productPrice: `${modalPrice.textContent}`,
-        productImage: `img/men-${itemID.textContent}.jpg`
+        productImage: gender.textContent === "Men's" ? `img/men-${itemID.textContent}.jpg` : `img/women-${itemID.textContent}.jpg` 
       };
-      // localStorage.setItem("shoe", JSON.stringify(shoeObj));
-
-      // let cartArray;
-      // if (localStorage.getItem(cartArray) === null) {
-      //     cartArray = [];
-      // } else {
-      //     cartArray = JSON.parse(localStorage.getItem(cartArray));
-      // }
-      // cartArray.push(JSON.stringify(modalProductName.textContent));
-
-      // console.log("Cart Array" + JSON.stringify(cartArray));
-
       cartArray = JSON.parse(localStorage.getItem("shoe")) || [];
       cartArray.push(shoeObj);
       localStorage.setItem("shoe", JSON.stringify(cartArray));
-      console.log(cartArray);
+      console.log("Cart Array: ", cartArray[0].productPrice);
     }
-    // cart.pop();
-    // console.log(cart);
-    // console.log(addToCartButton);
   });
 }
 
 let summaryListItems = document.querySelector(".summary-list-items");
-// console.log(summaryListItems)
 
 let myCart = JSON.parse(localStorage.getItem("shoe"));
 
@@ -87,12 +68,8 @@ for (let i = 0; i < myCart.length; i++) {
   newCartRowColOne.classList.add("col-lg-4", "cart-left-column");
   let newCartRowColTwo = document.createElement("div");
   newCartRowColTwo.classList.add("col-lg-8", "cart-right-column");
-  // let newCartRowColTwoContainer = document.createElement("div");
-  // newCartRowColTwoContainer.classList.add("row-two-container");
-  // newCartRowColTwo.appendChild(newCartRowColTwoContainer);
   let deleteButtonSection = document.createElement("row");
   deleteButtonSection.classList.add("delete-button-section");
-  // newCartRowColTwo.appendChild(deleteButtonSection);
   let deleteButton = document.createElement("button");
   deleteButton.textContent = "Remove Item";
   deleteButton.classList.add("delete-button");
@@ -100,17 +77,7 @@ for (let i = 0; i < myCart.length; i++) {
   orderSummaryList.appendChild(cartRowItem);
   cartRowItem.appendChild(newCartRowColOne);
   cartRowItem.appendChild(newCartRowColTwo);
-  console.log(newCartRowColTwo);
-  // let newNewLi = document.createElement("li");
-  // newNewLi.textContent = myCart[i].productName;
-  // summaryListItems.appendChild(newNewLi);
-  // newNewLi.classList.add("new-new-li")
-  // let newLiRow = document.createElement("div");
-  // newLiRow.classList.add("row");
-
-  // newLiRow.appendChild(newLiColOne);
-  // newLiRow.appendChild(newLiColTwo);
-  // newNewLi.appendChild(newLiRow);
+  // console.log(newCartRowColTwo);
 }
 
 let cartRightCol = document.querySelectorAll(".cart-right-column");
@@ -131,9 +98,9 @@ for (let i = 0; i < cartRightCol.length; i++) {
   cartProductPrice.textContent = myCart[i].productPrice;
   cartRightCol[i].appendChild(cartProductPrice);
 
+ 
   let deleteButtonSection = document.createElement("row");
   deleteButtonSection.classList.add("delete-button-section");
-  // newCartRowColTwo.appendChild(deleteButtonSection);
   let deleteButton = document.createElement("button");
   deleteButton.textContent = "Remove Item";
   deleteButton.classList.add("delete-button", "btn", "btn-danger");
@@ -145,21 +112,13 @@ for (let i = 0; i < cartLeftCol.length; i++) {
     let cartLeftColImg = document.createElement("img");
     cartLeftColImg.classList.add("cart-left-col-img");
     cartLeftCol[i].appendChild(cartLeftColImg);
-    
 }
 
 let cartLeftColNodeList = document.querySelectorAll(".cart-left-col-img");
     for (let j = 0; j < cartLeftColNodeList.length; j++) {
       cartLeftColNodeList[j].src = myCart[j].productImage.replace(/\s/g,'')
-      // console.log(myCart[j].productImage);
     }
-
-// console.log(myCart);
-// console.log(modalImage);
-
-
-      
-
+    
 let cartDeleteButton = document.querySelectorAll(".delete-button");
 let cartRowItems = document.querySelectorAll(".cart-row-item");
 let retrievedMyCartItems = localStorage.getItem("shoe");
@@ -167,50 +126,17 @@ let retrievedMyCartItems = localStorage.getItem("shoe");
 let toArrayOfObjects = JSON.parse(retrievedMyCartItems);
 for (let d = 0; d < cartDeleteButton.length; d++) {
   cartDeleteButton[d].addEventListener("click", function() {
-    
-    // console.log(d, retrievedMyCartItems);
-      // let index = toArrayOfObjects.indexOf(d);
       for (let p = 0; p < toArrayOfObjects.length; p++) {
         // console.log(p, toArrayOfObjects[p]);
         toArrayOfObjects.splice(d, 1);
         localStorage.setItem("shoe", JSON.stringify(toArrayOfObjects));
-          // toArrayOfObjects.splice(d, 1);
-          // console.log(d, toArrayOfObjects)
-          // if (toArrayOfObjects.length === 1) {
-          //   cartDeleteButton[d].addEventListener("click", function() {
-          //     toArrayOfObjects.pop();
-          //   })
-          // }
-          
-        // if (d == p) {
-        //   toArrayOfObjects.splice(d, 1);
-        //   console.log("updated", toArrayOfObjects);
-        //   localStorage.setItem("shoe", JSON.stringify(cartArray));
-          // localStorage.setItem("shoe", JSON.stringify(cartArray));
-        // }
       }
-      console.log("new array", toArrayOfObjects, toArrayOfObjects.length)
+      console.log("New Array: ", toArrayOfObjects, toArrayOfObjects.length)
       
-
       for (let c = 0; c < cartRowItems.length; c++) {
         cartRowItems[d].style.display = "none";
       }
   })
-  
 }
-
-
-// for (let d = 0; d < cartDeleteButton.length; d++) {
-//   for (let c = 0; c < cartRowItems.length; c++) {
-//     cartDeleteButton[d].addEventListener("click", function() {
-//       cartRowItems[d].style.display = "none";
-//     })
-//     console.log(retrievedMyCartItems)
-//   }
-  
-// }
-
-// let productImages = ["img/men-1.jpg", "img/men-2.jpg", "img/men-3.jpg", "img/men-4.jpg", 
-// "img/men-5.jpg", "img/men-6.jpg", "img/men-7.jpg", "img/men-8.jpg"]
 
 

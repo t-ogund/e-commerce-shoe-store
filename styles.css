@@ -574,15 +574,13 @@ a  p, a h6:hover {
 }
 
 .cart-left-column {
-    background-color: salmon;
     /* height: 35px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .cart-right-column {
-    background-color: plum;
     /* height: 100px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 img {
@@ -590,7 +588,7 @@ img {
 }
 
 .delete-button-section {
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     height: 50px;
     background-color: yellow;
     width: 100%;

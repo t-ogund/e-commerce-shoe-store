@@ -13,6 +13,8 @@ let orderSummaryList = document.querySelector(".order-summary-list");
 let actualProductPrice = document.querySelector(".actual-product-price");
 let modalImage = document.querySelectorAll(".modal-image");
 let itemID = document.querySelector(".item-id");
+let cartEmpty = document.querySelector(".cart-empty");
+let cartEmptyV2 = document.querySelector(".the-cart-is-now-empty");
 
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
@@ -78,7 +80,19 @@ for (let i = 0; i < myCart.length; i++) {
   cartRowItem.appendChild(newCartRowColOne);
   cartRowItem.appendChild(newCartRowColTwo);
   // console.log(newCartRowColTwo);
-}
+  }
+  console.log("My Cart: ", myCart, myCart.length);
+  // let cartRowItems = document.querySelectorAll(".cart-row-item");
+  
+  // for (let a = 0; a < orderSummaryList.childNodes.length; a++) {
+
+    // if (orderSummaryList.childNodes[a].classList.contains(".cart-row-item")) {
+    //   cartEmpty.style.display = "none";
+    // } else {
+    //   cartEmpty.style.display = "block";
+    // }
+  // }
+  
 
 let cartRightCol = document.querySelectorAll(".cart-right-column");
 for (let i = 0; i < cartRightCol.length; i++) {
@@ -123,13 +137,35 @@ let cartDeleteButton = document.querySelectorAll(".delete-button");
 let cartRowItems = document.querySelectorAll(".cart-row-item");
 let retrievedMyCartItems = localStorage.getItem("shoe");
 
+console.log("Cart Row Items: ", cartRowItems, cartRowItems.length);
+if (cartRowItems.length > 0) {
+  cartEmpty.style.display = "none";
+} else {
+  cartEmpty.style.display = "block";
+}
+
 let toArrayOfObjects = JSON.parse(retrievedMyCartItems);
+// if (toArrayOfObjects.length === 0) {
+//   cartEmpty.style.display = "none";
+// }
+
 for (let d = 0; d < cartDeleteButton.length; d++) {
   cartDeleteButton[d].addEventListener("click", function() {
       for (let p = 0; p < toArrayOfObjects.length; p++) {
         // console.log(p, toArrayOfObjects[p]);
         toArrayOfObjects.splice(d, 1);
         localStorage.setItem("shoe", JSON.stringify(toArrayOfObjects));
+        if (toArrayOfObjects.length === 0) {
+          cartEmpty.style.display = "block";
+        }
+        // if (toArrayOfObjects.length === 0) {
+        //   let emptyNotification = document.createElement("h4");
+        //   emptyNotification.classList.add("empty-notification");
+        //   emptyNotification.textContent= "Your cart is empty.";
+        //   cartEmpty.appendChild(emptyNotification);
+        // } else {
+        //   cartEmpty.style.display = "none";
+        // }
       }
       console.log("New Array: ", toArrayOfObjects, toArrayOfObjects.length)
       

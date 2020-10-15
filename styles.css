@@ -605,6 +605,12 @@ img {
     height: 50%;
 }
 
+.cart-empty {
+    margin-top: 25px;
+    /* display: block; */
+    width: 50%;
+}
+
 /* .gallery {
     display: flex;
     flex-wrap: wrap;

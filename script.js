@@ -15,6 +15,7 @@ let modalImage = document.querySelectorAll(".modal-image");
 let itemID = document.querySelector(".item-id");
 let cartEmpty = document.querySelector(".cart-empty");
 let cartEmptyV2 = document.querySelector(".the-cart-is-now-empty");
+let orderSummaryBreakdown = document.querySelector(".order-summary-breakdown");
 
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
@@ -143,6 +144,11 @@ if (cartRowItems.length > 0) {
 } else {
   cartEmpty.style.display = "block";
 }
+if (cartEmpty.style.display === "block") {
+  orderSummaryBreakdown.style.display = "none";
+}
+
+
 
 let toArrayOfObjects = JSON.parse(retrievedMyCartItems);
 // if (toArrayOfObjects.length === 0) {
@@ -157,6 +163,7 @@ for (let d = 0; d < cartDeleteButton.length; d++) {
         localStorage.setItem("shoe", JSON.stringify(toArrayOfObjects));
         if (toArrayOfObjects.length === 0) {
           cartEmpty.style.display = "block";
+          orderSummaryBreakdown.style.display = "none";
         }
         // if (toArrayOfObjects.length === 0) {
         //   let emptyNotification = document.createElement("h4");

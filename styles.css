@@ -546,8 +546,20 @@ a  p, a h6 {
     text-decoration: none;
 }
 
-a  p, a h6:hover {
+/* a  p, a h6:hover {
     color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+} */
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-link:hover {
     text-decoration: none;
 }
 

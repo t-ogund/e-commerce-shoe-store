@@ -31,10 +31,32 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 400px;
+}
+
+@media only screen and (max-width: 767px) {
+    .mid-right {
+        /* background-image: url("img/yellow-casual-shoes.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 400px; */
+        margin-top: 10px;
+    }
 }
 
 .container-fluid {
     overflow: hidden;
+}
+
+.men-0 {
+    height: 200px;
+    background-image: url("img/men-0.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+    image-rendering: cover;
 }
 
 .men-1 {
@@ -100,9 +122,9 @@ body {
     object-fit: cover;
 }
 
-.men-8 {
+.women-0 {
     height: 200px;
-    background-image: url("img/men-8.jpg");
+    background-image: url("img/women-0.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -172,15 +194,6 @@ body {
     object-fit: cover;
 }
 
-.women-8 {
-    height: 200px;
-    background-image: url("img/women-8.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    object-fit: cover;
-}
-
 .filter {
     /* border: 1px solid black; */
 }
@@ -207,6 +220,15 @@ i {
 }
 
 /* Big Product Images */
+
+.product-0 {
+    height: 500px;
+    background-image: url("img/men-0.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: contain;
+}
 
 .product-1 {
     height: 500px;
@@ -271,9 +293,9 @@ i {
     object-fit: contain;
 }
 
-.product-8 {
+.women-product-0 {
     height: 500px;
-    background-image: url("img/men-8.jpg");
+    background-image: url("img/women-0.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -343,16 +365,17 @@ i {
     object-fit: contain;
 }
 
-.women-product-8 {
-    height: 500px;
-    background-image: url("img/women-8.jpg");
+/* Small Product Images */
+
+.product-0-small-image {
+    height: 100px;
+    background-image: url("img/men-0.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     object-fit: contain;
+    width: 50%;
 }
-
-/* Small Product Images */
 
 .product-1-small-image {
     height: 100px;
@@ -424,9 +447,9 @@ i {
     width: 50%;
 }
 
-.product-8-small-image {
+.women-product-0-small-image {
     height: 100px;
-    background-image: url("img/men-8.jpg");
+    background-image: url("img/women-0.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -497,16 +520,6 @@ i {
 .women-product-7-small-image {
     height: 100px;
     background-image: url("img/women-7.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    object-fit: contain;
-    width: 50%;
-}
-
-.women-product-8-small-image {
-    height: 100px;
-    background-image: url("img/women-8.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

@@ -170,15 +170,26 @@ function remove(e) {
       }
     }
 
+    let amountToDelete = Number(e.target.parentNode.childNodes[2].textContent.slice(1));
+      console.log("Amount To Delete: ", amountToDelete)
+      let totalAtItemDelete = Number(total.textContent.slice(1));
+      console.log("Total At Item Delete: ", totalAtItemDelete);
+      let newTotalAfterItemDelete = totalAtItemDelete - amountToDelete;
+      console.log("New Total After Item Delete: ", newTotalAfterItemDelete);
+      total.textContent = `$${newTotalAfterItemDelete}.00`;
+
+    if (newToArrayOfObjects.length === 0) {
+      cartEmpty.style.display = "block";
+      orderSummaryBreakdown.style.display = "none";
+      localStorage.clear();
+    }
+
     localStorage.setItem("shoe", JSON.stringify(newToArrayOfObjects));
+    console.log("To Array Of Objects: ", toArrayOfObjects)
     return toArrayOfObjects
 }
 
-        if (toArrayOfObjects.length === 0) {
-          cartEmpty.style.display = "block";
-          orderSummaryBreakdown.style.display = "none";
-          localStorage.clear();
-        }
+        
       
 
 let productPriceArray = document.querySelectorAll(".cart-product-price");

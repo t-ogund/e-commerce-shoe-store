@@ -551,7 +551,7 @@ i {
 }
 
 .order-summary-list {
-    height: 500px;
+    height: 100%;
 }
 
 a  p, a h6 {
@@ -634,6 +634,20 @@ img {
     margin-top: 25px;
     /* display: block; */
     width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    .new-arrival-container {
+        overflow-x: scroll;
+    }
+  }
+
+.new-arrival {
+    min-width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: green;
 }
 
 /* .gallery {

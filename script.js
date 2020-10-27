@@ -19,6 +19,12 @@ let orderSummaryBreakdown = document.querySelector(".order-summary-breakdown");
 let total = document.querySelector(".total");
 let uniqueID = document.querySelector(".unique-id");
 
+//you might also like
+let newArrivalImageSource = document.querySelectorAll(".new-arrival-image-source");
+let newArrivalItemTitleText = document.querySelectorAll(".new-arrival-item-title-text");
+let newArrivalGenderText = document.querySelectorAll(".new-arrival-gender-text");
+let newArrivalPriceText = document.querySelectorAll(".new-arrival-price-text");
+
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
   sizeBox[i].addEventListener("click", function () {
@@ -205,3 +211,28 @@ for (let s = 0; s < updatedPriceArray.length; s++) {
 }
 
 total.textContent = `$${sum}.00`;
+
+fetch("https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?concepts=H%2526M%20MAN&categories=men_all&currentpage=0&country=asia2&pagesize=30&lang=en", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b83c4c021amsh3983c7298d63292p1155a9jsnaa9b026a3b17"
+	}
+})
+.then(response => response.json())
+.then(data => {
+  let mensFive = data.results.slice(0, 5);
+  console.log(mensFive)
+  
+  for (let i = 0; i < mensFive.length; i++) {
+    newArrivalImageSource[i].src = mensFive[i].images[0].url;
+    newArrivalItemTitleText[i].textContent = mensFive[i].name;
+    newArrivalGenderText[i].textContent = mensFive[i].categoryName;
+    newArrivalPriceText[i].textContent = `$${mensFive[i].price.value}`;
+    // console.log(mensFive.name)
+  }
+
+})
+.catch(err => {
+	console.log(err);
+});

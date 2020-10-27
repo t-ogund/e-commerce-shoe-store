@@ -636,7 +636,7 @@ img {
     width: 50%;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .new-arrival-container {
         overflow-x: scroll;
     }
@@ -644,10 +644,23 @@ img {
 
 .new-arrival {
     min-width: 200px;
-    height: 300px;
+    height: 400px;
     margin: 10px;
+    /* border: 1px solid black; */
+    /* background-color: green; */
+}
+
+.new-arrival-image {
     border: 1px solid black;
-    background-color: green;
+    height: 75%;
+}
+
+.new-arrival-card-text {
+    padding: 5px;
+    text-align: center;
+    line-height: .9em;
+    border: 1px solid black;
+    height: 25%;
 }
 
 /* .gallery {

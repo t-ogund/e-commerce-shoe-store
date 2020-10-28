@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e448e771e2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Shoe Store</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="mens.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Men
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="mens.html">Men's Shoes</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="womens.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Women
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="womens.html">Women's Shoes</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="cart.html" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-cart"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 bg-info">
+                    <div class="row">
+                        <h1>Checkout</h1>
+                    </div>
+                    <div class="row d-flex justify-content-center mb-5">
+                        <form class="bg-success form-width">
+                            <div>
+                                <h2>1 Contact Information</h2>
+                            </div>
+                            <div>
+                                <p class="e-mail-address"></p>
+                                <p>Already have an account? <span>Please Sign In</span></p>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="first-name">First*</label>
+                                <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="last-name">Last*</label>
+                                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="email">E-Mail Address*</label>
+                              <input type="email" class="form-control" id="email" placeholder="you@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telephone*</label>
+                                <input type="text" class="form-control" id="phone" placeholder="000-000-0000">
+                              </div>
+                              
+                              <div class="button-section">
+                                <button type="submit" class="btn btn-primary">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Save & Continue</button>
+                              </div>                       
+                          </form>
+                    </div>
+
+                    <div class="row d-flex justify-content-center mb-5">
+                        <form class="bg-warning form-width">
+                            <div>
+                                <h2>2 Package Options</h2>
+                            </div>
+    
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="first-name">First*</label>
+                                <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="last-name">Last*</label>
+                                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Street Address 1*</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                            </div>
+                            <div class="form-row bg-success shipping-address">
+                                <div class="form-group col-md-4 bg-dark">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                <div class="form-group col-md-4 bg-light">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                  <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                  </label>
+                                </div>
+                            </div>
+                            
+                            <div class="checkout-display-section">
+                                <div class="checkout-display-image">
+
+                                </div>
+                                <div class="checkout-display-narrative">
+
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                  <label for="shipping-option">When would you like this delivered?*</label>
+                                  <select id="shipping-option" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+
+                                <div class="button-section">
+                                    <button type="submit" class="btn btn-primary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save & Continue</button>
+                                </div>
+                            </div>
+
+
+                          </form>
+                    </div>
+                    
+                    <!-- <div class="row d-flex justify-content-center">
+                        <form class="bg-warning">
+                            <div>
+                                <h2>2 Package Options</h2>
+                            </div>
+                            <div class="h5">Ship To</div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="first-name">First*</label>
+                                <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="last-name">Last*</label>
+                                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                              </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Street Address 1*</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Street Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                </div>
+                              
+                            </div>
+                          </form>
+                    </div> -->
+
+                </div>
+                <div class="col-md-4 bg-warning">
+                    <div class="col-md-12 fixed-order-summary">
+                        <div class="order-summary-title">
+                            <h2>Order Summary</h2>
+                        </div>
+                        <div class="subtotal-section">
+    
+                        </div>
+                        <div class="shipping-section">
+                            <p>Standard Shipping:</p>
+                            <p>3 - 5 Business Days</p>
+                        </div>
+                        <div class="discount-section">
+                            <p>Discounts: </p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="final-total">
+                            <p>Total: </p>
+                            <p class="total"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -663,6 +663,18 @@ img {
     height: 25%;
 }
 
+/* .shipping-address {
+    width: 75%;
+} */
+
+.form-width {
+    width: 75%;
+}
+
+.fixed-order-summary {
+    position: fixed;
+}
+
 /* .gallery {
     display: flex;
     flex-wrap: wrap;

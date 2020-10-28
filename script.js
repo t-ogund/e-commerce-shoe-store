@@ -212,44 +212,44 @@ for (let s = 0; s < updatedPriceArray.length; s++) {
 
 total.textContent = `$${sum}.00`;
 
-fetch("https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?concepts=H%2526M%20MAN&categories=men_all&currentpage=0&country=asia2&pagesize=30&lang=en", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-    "x-rapidapi-key": "06b0ccfc3dmshd632c1509f6ef19p137354jsn01f64c6e8911"
-    //original
-    //b83c4c021amsh3983c7298d63292p1155a9jsnaa9b026a3b17
-	}
-})
-.then(response => response.json())
-.then(data => {
-  let mensFive = data.results;
-  console.log(data);
-  let mensFiveArrayContainer = [];
-  for (let i = 0; i < mensFive.length; i++) {
-     let randomIndex = Math.floor(Math.random() * 30);
-    mensFiveArrayContainer.push(mensFive[randomIndex]);
-  }
+// fetch("https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?concepts=H%2526M%20MAN&categories=men_all&currentpage=0&country=asia2&pagesize=30&lang=en", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
+//     "x-rapidapi-key": "06b0ccfc3dmshd632c1509f6ef19p137354jsn01f64c6e8911"
+//     //original
+//     //b83c4c021amsh3983c7298d63292p1155a9jsnaa9b026a3b17
+// 	}
+// })
+// .then(response => response.json())
+// .then(data => {
+//   let mensFive = data.results;
+//   console.log(data);
+//   let mensFiveArrayContainer = [];
+//   for (let i = 0; i < mensFive.length; i++) {
+//      let randomIndex = Math.floor(Math.random() * 30);
+//     mensFiveArrayContainer.push(mensFive[randomIndex]);
+//   }
   
-    console.log("Array Container: ", mensFiveArrayContainer);
-    let newFive = mensFiveArrayContainer.slice(0, 5);
-  console.log(newFive);
+//     console.log("Array Container: ", mensFiveArrayContainer);
+//     let newFive = mensFiveArrayContainer.slice(0, 5);
+//   console.log(newFive);
 
 
 
 
 
-  // console.log(mensFive)
+//   // console.log(mensFive)
   
-  for (let i = 0; i < newFive.length; i++) {
-    newArrivalImageSource[i].src = newFive[i].images[0].url;
-    newArrivalItemTitleText[i].textContent = newFive[i].name;
-    newArrivalGenderText[i].textContent = newFive[i].categoryName;
-    newArrivalPriceText[i].textContent = `$${newFive[i].price.value}`;
-    console.log(newFive.name)
-  }
+//   for (let i = 0; i < newFive.length; i++) {
+//     newArrivalImageSource[i].src = newFive[i].images[0].url;
+//     newArrivalItemTitleText[i].textContent = newFive[i].name;
+//     newArrivalGenderText[i].textContent = newFive[i].categoryName;
+//     newArrivalPriceText[i].textContent = `$${newFive[i].price.value}`;
+//     console.log(newFive.name)
+//   }
 
-})
-.catch(err => {
-	console.log(err);
-});
+// })
+// .catch(err => {
+// 	console.log(err);
+// });

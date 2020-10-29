@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 checkout-page">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -83,9 +83,11 @@
                                 <input type="text" class="form-control" id="phone" placeholder="000-000-0000">
                               </div>
                               
-                              <div class="button-section">
-                                <button type="submit" class="btn btn-primary">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Save & Continue</button>
+                              <div class="form-row button-section">
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn btn-outline-dark cancel mr-2">Cancel</button>
+                                    <button type="submit" class="btn btn-dark save-and-continue ml-2">Save & Continue</button>
+                                </div>
                               </div>                       
                           </form>
                     </div>
@@ -214,15 +216,67 @@
                                     <option>1 Business Day - $32.98 (USD)</option>
                                   </select>
                                 </div>
-
-                                <div class="button-section">
-                                    <button type="submit" class="btn btn-primary">Cancel</button>
-                                    <button type="submit" class="btn btn-primary">Save & Continue</button>
-                                </div>
                             </div>
+
+                            <div class="form-row button-section">
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn btn-outline-dark cancel mr-2">Cancel</button>
+                                    <button type="submit" class="btn btn-dark save-and-continue ml-2">Save & Continue</button>
+                                </div>
+                            </div>   
 
 
                           </form>
+                    </div>
+
+                    <div class="row d-flex justify-content-center mb-5">
+                        <form class="form-width">
+                            <div>
+                                <h2>3 Payment</h2>
+                            </div>
+                            <div class="form-group">
+                              <label for="card-number">Enter Your Card Number</label>
+                              <input type="card-number" class="form-control" id="card-number" placeholder="Card Number">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="card-month"></label>
+                                    <input type="text" class="form-control" id="card-month" placeholder="MM*">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="card-year"></label>
+                                    <input type="text" class="form-control" id="card-year" placeholder="YY*">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="card-security-code"></label>
+                                    <input type="text" class="form-control" id="card-security-code" placeholder="CSC*">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                      <input class="payment-form-check-input" type="checkbox" id="payment-form-check-input">
+                                      <label class="form-check-label" for="payment-form-check-input">
+                                        Business and shipping address are the same
+                                      </label>
+                                    </div>
+                                </div>
+                            </div>              
+                        </form>
+                    </div>
+
+                    <div class="row d-flex justify-content-center mb-5">
+                        <form class="form-width">
+                            <div>
+                                <h2>4 Review</h2>
+                            </div>
+                            <div class="checkout-display-section">
+                                <div class="checkout-display-image">
+
+                                </div>
+                                <div class="checkout-display-narrative">
+                                    <p>name of shoe and size</p>
+                                </div>
+                            </div>             
+                        </form>
                     </div>
                     
                     <!-- <div class="row d-flex justify-content-center">
@@ -278,10 +332,10 @@
                     </div> -->
 
                 </div>
-                <div class="col-md-4">
-                    <div class="col-md-12">
+                <div class="col-md-4 bg-info">
+                    <div class="col-md-12 bg-danger fixed-order-summary">
                         <div class="order-summary-title">
-                            <h2 class="fixed-order-summary">Order Summary</h2>
+                            <h2>Order Summary</h2>
                         </div>
                         <div class="subtotal-section">
     

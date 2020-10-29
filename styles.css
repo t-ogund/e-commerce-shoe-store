@@ -671,9 +671,26 @@ img {
     width: 75%;
 }
 
-/* .fixed-order-summary {
-  
+.checkout-display-section {
+    border: 1px solid black;
+}
+
+.cancel {
+    width: 25%;
+}
+
+.save-and-continue {
+    width: 40%;
+}
+
+/* .checkout-page {
+    height: 100%;
 } */
+
+.fixed-order-summary {
+  position: sticky;
+  top: 0;
+}
 
 /* .gallery {
     display: flex;

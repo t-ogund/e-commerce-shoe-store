@@ -1,6 +1,4 @@
-
-
-// console.log("hi");
+//Contact Information
 let checkOutButton = document.querySelector(".checkout");
 let checkOutTotal = document.querySelector(".checkout-total");
 let saveAndContinueContact = document.querySelector(".save-and-continue");
@@ -57,6 +55,24 @@ saveAndContinueContact.addEventListener("click", function(e) {
         // console.log("cancel")
     })
     
+})
+
+//Package Info
+let saveAndContinuePackage = document.querySelector(".save-and-continue-package");
+let firstNamePackage = document.querySelector("#first-name-package");
+let lastNamePackage = document.querySelector("#last-name-package");
+let addressOne = document.querySelector("#inputAddress-package");
+let addressTwo = document.querySelector("#inputAddress2-package");
+let zipCode = document.querySelector("#inputZip-package");
+let city = document.querySelector("#inputCity-package");
+let packageToggle = document.querySelector(".package-toggle");
+
+
+
+
+saveAndContinuePackage.addEventListener("click", function(e) {
+    e.preventDefault();
+    packageToggle.style.display = "none";
 })
 
 

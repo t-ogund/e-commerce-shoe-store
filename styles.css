@@ -710,8 +710,23 @@ img {
 }
 
 .image-section {
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+    image-rendering: cover;
+    margin-left: 2rem;
+}
+
+.package-display-row {
+    display: flex;
+    height: 100%;
+}
+
+.narrative-section {
+    padding: 2rem;
 }
 
 /* .gallery {

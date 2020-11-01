@@ -104,12 +104,30 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     console.log(cartArray);
     for (let i = 0; i < cartArray.length; i++) {
         let packageDisplayContainer = document.createElement("div");
+        let packageDisplayRow = document.createElement("div");
+        packageDisplayRow.classList.add("row", "package-display-row");
         packageDisplayContainer.classList.add("package-display-container");
         packageDisplay.appendChild(packageDisplayContainer);
-        let imageSection = document.createElement("img");
+        packageDisplayContainer.appendChild(packageDisplayRow);
+        let imageSection = document.createElement("div");
         imageSection.classList.add("image-section");
-        imageSection.src = `img/men-${i}.jpg`;
-        packageDisplayContainer.appendChild(imageSection);
+        let narrativeSection = document.createElement("div");
+        narrativeSection.classList.add("narrative-section");
+        imageSection.style.backgroundImage = `url(${cartArray[i].productImage.replace(/\s/g,'')})`
+        console.log(cartArray[i].productImage.replace(/\s/g,''));
+        packageDisplayRow.appendChild(imageSection);
+        packageDisplayRow.appendChild(narrativeSection);
+        let packageDescription = document.createElement("p");
+        packageDescription.classList.add("package-description");
+        let packageDetails = document.createElement("p");
+        packageDetails.classList.add("package-details");
+        packageDescription.textContent = cartArray[i].productName;
+        packageDetails.textContent = `${cartArray[i].productSex} ${cartArray[i].productSize}`;
+        narrativeSection.appendChild(packageDescription);
+        narrativeSection.appendChild(packageDetails);
+
+
+
 
     }
     

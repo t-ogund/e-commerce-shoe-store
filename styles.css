@@ -692,6 +692,17 @@ img {
   top: 0;
 }
 
+.checkout {
+    width: 100%;
+}
+
+.contact-display {
+    border: 1px solid black;
+    margin-bottom: 10%;
+    line-height: .5rem;
+    padding: 10px;
+}
+
 /* .gallery {
     display: flex;
     flex-wrap: wrap;

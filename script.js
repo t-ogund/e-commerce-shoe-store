@@ -25,6 +25,16 @@ let newArrivalItemTitleText = document.querySelectorAll(".new-arrival-item-title
 let newArrivalGenderText = document.querySelectorAll(".new-arrival-gender-text");
 let newArrivalPriceText = document.querySelectorAll(".new-arrival-price-text");
 
+let checkOutButton = document.querySelector(".checkout");
+let checkOutTotal = document.querySelector(".checkout-total");
+let saveAndContinueContact = document.querySelector(".save-and-continue");
+let firstName = document.querySelector("#first-name");
+let lastName = document.querySelector("#last-name");
+
+
+function shoeStore() {
+
+
 let cart = [];
 for (let i = 0; i < sizeBox.length; i++) {
   sizeBox[i].addEventListener("click", function () {
@@ -33,6 +43,7 @@ for (let i = 0; i < sizeBox.length; i++) {
 }
 
 let productHolder = [];
+
 
 for (let i = 0; i < addToCartButton.length; i++) {
   addToCartButton[i].addEventListener("click", function (e) {
@@ -144,7 +155,6 @@ console.log("Cart Row Items: ", cartRowItems, cartRowItems.length);
 if (cartRowItems.length > 0) {
   cartEmpty.style.display = "none";
   orderSummaryBreakdown.classList.remove("hide");
-
 } else {
   cartEmpty.style.display = "block";
   orderSummaryBreakdown.classList.add("hide");
@@ -253,3 +263,15 @@ total.textContent = `$${sum}.00`;
 // .catch(err => {
 // 	console.log(err);
 // });
+
+}
+shoeStore();
+
+// function saveAndContinue() {
+//   saveAndContinueContact.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     alert("yo");
+//     console.log("hi");
+//   })
+// }
+// saveAndContinue()

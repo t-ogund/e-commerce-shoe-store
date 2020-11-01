@@ -696,11 +696,22 @@ img {
     width: 100%;
 }
 
-.contact-display {
+.contact-display, .package-display {
     border: 1px solid black;
     margin-bottom: 10%;
     line-height: .5rem;
     padding: 10px;
+}
+
+.package-display-container {
+    border: 1px solid black;
+    height: 100px;
+    margin: 10px;
+}
+
+.image-section {
+    height: 50px;
+    width: 50px;
 }
 
 /* .gallery {

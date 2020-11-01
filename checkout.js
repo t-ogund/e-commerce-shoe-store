@@ -66,6 +66,9 @@ let addressTwo = document.querySelector("#inputAddress2-package");
 let zipCode = document.querySelector("#inputZip-package");
 let city = document.querySelector("#inputCity-package");
 let packageToggle = document.querySelector(".package-toggle");
+let formPackageSection = document.querySelector(".form-package-section");
+let state = document.querySelector("#inputState-package");
+let displayPackageNarrative = document.querySelector(".checkout-display-narrative-package");
 
 
 
@@ -73,6 +76,58 @@ let packageToggle = document.querySelector(".package-toggle");
 saveAndContinuePackage.addEventListener("click", function(e) {
     e.preventDefault();
     packageToggle.style.display = "none";
+
+    let packageDisplay = document.createElement("div");
+    packageDisplay.classList.add("package-display");
+    let contactNamePackage = document.createElement("p");
+    firstNamePackage.textContent = firstNamePackage.value;
+    lastNamePackage.textContent = lastNamePackage.value;
+    contactNamePackage.textContent = `${firstNamePackage.textContent} ${lastNamePackage.textContent}`;
+    contactNamePackage.style.fontWeight = "700";
+    packageDisplay.appendChild(contactNamePackage);
+    formPackageSection.appendChild(packageDisplay);
+    let streetAddress = document.createElement("p");
+    streetAddress.classList.add("street-address");
+    streetAddress.textContent = addressOne.value;
+    packageDisplay.appendChild(streetAddress);
+    let cityStateZip = document.createElement("p");
+    cityStateZip.classList.add("city-state-zip");
+    cityStateZip.textContent = `${city.value}, ${state.options[state.selectedIndex].text} ${zipCode.value}`;
+    // console.log(cityStateZip)
+    packageDisplay.appendChild(cityStateZip);
+    let editButtonPackage = document.createElement("button");
+    editButtonPackage.classList.add("btn", "btn-outline-dark", "btn-lg", "btn-block", "edit-button");
+    editButtonPackage.textContent = "Edit";
+    formPackageSection.appendChild(editButtonPackage);
+
+    let cartArray = JSON.parse(localStorage.getItem("shoe"));
+    console.log(cartArray);
+    for (let i = 0; i < cartArray.length; i++) {
+        let packageDisplayContainer = document.createElement("div");
+        packageDisplayContainer.classList.add("package-display-container");
+        packageDisplay.appendChild(packageDisplayContainer);
+        let imageSection = document.createElement("img");
+        imageSection.classList.add("image-section");
+        imageSection.src = `img/men-${i}.jpg`;
+        packageDisplayContainer.appendChild(imageSection);
+
+    }
+    
+
+
+
+
+
+
+    editButtonPackage.addEventListener("click", function(e) {
+        e.preventDefault();
+        editButtonPackage.style.display = "none";
+        packageDisplay.style.display = "none";
+        packageToggle.style.display = "block";
+    })
+
+
+    
 })
 
 

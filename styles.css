@@ -767,17 +767,17 @@ img {
     display: flex;
     border: 1px solid grey;
     height: 100px;
-    background-color: purple;
+    /* background-color: purple; */
     border-radius: 5px;
     margin: 10px 0 10px 0;
 
 }
 
 .review-checkout-image-section {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     height: 100px;
     width: 20%;
-    background-color: blue;
+    /* background-color: blue; */
 
     height: 100%;
     width: 20%;
@@ -790,19 +790,19 @@ img {
 }
 
 .review-checkout-narrative {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     height: 100px;
     width: 60%;
-    background-color: red;
+    /* background-color: red; */
     padding: 2% 0 2% 0;
     /* display: flex; */
 }
 
 .review-checkout-item-price {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     height: 100px;
     width: 20%;
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     align-items: center;
 }

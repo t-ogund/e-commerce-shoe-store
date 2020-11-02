@@ -679,9 +679,9 @@ img {
     width: 25%;
 }
 
-.save-and-continue {
+/* .save-and-continue {
     width: 40%;
-}
+} */
 
 /* .checkout-page {
     height: 100%;
@@ -717,16 +717,28 @@ img {
     background-size: contain;
     object-fit: cover;
     image-rendering: cover;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .package-display-row {
     display: flex;
     height: 100%;
+    background-color: blue;
 }
 
 .narrative-section {
-    padding: 2rem;
+    padding: 1rem;
+    background-color: red;
+    width: 75%;
+}
+
+.package-description, .package-details {
+    margin-top: 10px;
+    background-color: purple;
+}
+
+.package-title {
+    font-size: 1.5rem;
 }
 
 /* .gallery {

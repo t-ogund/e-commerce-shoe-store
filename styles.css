@@ -645,7 +645,7 @@ img {
 .new-arrival {
     min-width: 200px;
     height: 400px;
-    margin: 10px;
+    /* margin: 10px; */
     /* border: 1px solid black; */
     /* background-color: green; */
 }
@@ -697,16 +697,19 @@ img {
 }
 
 .contact-display, .package-display {
-    border: 1px solid black;
+    /* border: 1px solid grey; */
     margin-bottom: 10%;
     line-height: 1.1rem;
+    border-radius: 5px;
+    /* padding: 5px; */
     /* padding: 2rem; */
 }
 
 .package-display-container {
-    border: 1px solid black;
+    border: 1px solid gray;
     height: 100px;
-    margin: 10px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
 }
 
 .image-section {
@@ -733,12 +736,86 @@ img {
 }
 
 .package-description, .package-details {
-    margin-top: 10px;
+    margin-top: 5px;
     /* background-color: purple; */
 }
 
 .package-title {
     font-size: 1.5rem;
+}
+
+.shipping-selection-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    /* margin: 10px; */
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    /* padding: 1rem; */
+}
+
+.contact-display-package {
+    border: 1px solid grey;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.review-checkout-display-item {
+    display: flex;
+    border: 1px solid grey;
+    height: 100px;
+    background-color: purple;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+
+}
+
+.review-checkout-image-section {
+    border: 1px solid grey;
+    height: 100px;
+    width: 20%;
+    background-color: blue;
+
+    height: 100%;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+    image-rendering: cover;
+    margin-left: 2rem;
+}
+
+.review-checkout-narrative {
+    border: 1px solid grey;
+    height: 100px;
+    width: 60%;
+    background-color: red;
+    padding: 2% 0 2% 0;
+    /* display: flex; */
+}
+
+.review-checkout-item-price {
+    border: 1px solid grey;
+    height: 100px;
+    width: 20%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.review-price {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.review-checkout-narrative {
+    /* display: flex; */
+    align-items: center;
 }
 
 /* .gallery {

@@ -69,7 +69,7 @@ let packageToggle = document.querySelector(".package-toggle");
 let formPackageSection = document.querySelector(".form-package-section");
 let state = document.querySelector("#inputState-package");
 let displayPackageNarrative = document.querySelector(".checkout-display-narrative-package");
-
+let shippingOptionPackage = document.querySelector("#shipping-option-package");
 
 
 
@@ -77,14 +77,19 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     e.preventDefault();
     packageToggle.style.display = "none";
 
+
+
     let packageDisplay = document.createElement("div");
     packageDisplay.classList.add("package-display");
+    let contactDisplayPackage = document.createElement("div");
+    contactDisplayPackage.classList.add("contact-display-package");
+    packageDisplay.appendChild(contactDisplayPackage);
     let contactNamePackage = document.createElement("p");
     firstNamePackage.textContent = firstNamePackage.value;
     lastNamePackage.textContent = lastNamePackage.value;
     contactNamePackage.textContent = `${firstNamePackage.textContent} ${lastNamePackage.textContent}`;
     contactNamePackage.style.fontWeight = "700";
-    packageDisplay.appendChild(contactNamePackage);
+
     formPackageSection.appendChild(packageDisplay);
     let streetAddress = document.createElement("p");
     streetAddress.classList.add("street-address");
@@ -93,8 +98,39 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     let cityStateZip = document.createElement("p");
     cityStateZip.classList.add("city-state-zip");
     cityStateZip.textContent = `${city.value}, ${state.options[state.selectedIndex].text} ${zipCode.value}`;
+
+
+    contactDisplayPackage.appendChild(contactNamePackage);
+    contactDisplayPackage.appendChild(streetAddress);
+    contactDisplayPackage.appendChild(cityStateZip);
+
+    let reviewCheckoutDisplaySection = document.querySelector(".review-checkout-display-section");
+    reviewCheckoutDisplaySection.classList.add("review-checkout-display-section");
+
+    // let reviewCheckoutDisplayItem = document.createElement("div");
+    // reviewCheckoutDisplayItem.classList.add("review-checkout-display-item");
+
+    // reviewCheckoutDisplaySection.appendChild(reviewCheckoutDisplayItem);
+
+    
+    // let reviewCheckoutImageSection = document.createElement("div");
+    // reviewCheckoutImageSection.classList.add("review-checkout-image-section");
+    // let reviewCheckoutNarrative = document.createElement("div");
+    // reviewCheckoutNarrative.classList.add("review-checkout-narrative");
+    // let reviewCheckoutItemPrice = document.createElement("div");
+    // reviewCheckoutItemPrice.classList.add("review-checkout-item-price");
+    // reviewCheckoutDisplayItem.appendChild(reviewCheckoutImageSection);
+    // reviewCheckoutDisplayItem.appendChild(reviewCheckoutNarrative);
+    // reviewCheckoutDisplayItem.appendChild(reviewCheckoutItemPrice);
+    
+
+
+    
+    
+    // packageDisplay.appendChild(contactNamePackage);
+    
     // console.log(cityStateZip)
-    packageDisplay.appendChild(cityStateZip);
+    // packageDisplay.appendChild(cityStateZip);
     let editButtonPackage = document.createElement("button");
     editButtonPackage.classList.add("btn", "btn-outline-dark", "btn-lg", "btn-block", "edit-button");
     editButtonPackage.textContent = "Edit";
@@ -126,27 +162,95 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         narrativeSection.appendChild(packageDescription);
         narrativeSection.appendChild(packageDetails);
 
+        //review section
 
+        let reviewCheckoutDisplayItem = document.createElement("div");
+    reviewCheckoutDisplayItem.classList.add("review-checkout-display-item");
 
+    reviewCheckoutDisplaySection.appendChild(reviewCheckoutDisplayItem);
 
-    }
     
+    let reviewCheckoutImageSection = document.createElement("div");
+    reviewCheckoutImageSection.classList.add("review-checkout-image-section");
+    reviewCheckoutImageSection.style.backgroundImage = `url(${cartArray[i].productImage.replace(/\s/g,'')})`
+    let reviewCheckoutNarrative = document.createElement("div");
+    reviewCheckoutNarrative.classList.add("review-checkout-narrative");
+    let reviewDescription = document.createElement("p");
+    reviewDescription.classList.add("review-description");
+    reviewDescription.textContent = cartArray[i].productName;
+    let reviewSize = document.createElement("p");
+    reviewSize.classList.add("review-size");
+    reviewSize.textContent = `${cartArray[i].productSize}`
+    reviewCheckoutNarrative.appendChild(reviewDescription);
+    reviewCheckoutNarrative.appendChild(reviewSize);
+    let reviewCheckoutItemPrice = document.createElement("div");
+    reviewCheckoutItemPrice.classList.add("review-checkout-item-price");
+    let reviewPrice = document.createElement("p");
+    reviewPrice.classList.add("review-price");
+    reviewPrice.textContent = `${cartArray[i].productPrice}`;
+    reviewCheckoutItemPrice.appendChild(reviewPrice);
+    reviewCheckoutDisplayItem.appendChild(reviewCheckoutImageSection);
+    reviewCheckoutDisplayItem.appendChild(reviewCheckoutNarrative);
+    reviewCheckoutDisplayItem.appendChild(reviewCheckoutItemPrice);
 
 
+        //review section
+    }
+        let shippingSelectionSection = document.createElement("div");
+        shippingSelectionSection.classList.add("shipping-selection-section");
+        let shippingOption = document.createElement("p");
+        shippingOption.classList.add("shipping-option");
+        shippingOption.textContent = `${shippingOptionPackage.options[shippingOptionPackage.selectedIndex].text}`
+        console.log(shippingOption.textContent);
+        packageDisplay.appendChild(shippingSelectionSection);
+        shippingSelectionSection.appendChild(shippingOption);
 
+        
 
 
 
     editButtonPackage.addEventListener("click", function(e) {
         e.preventDefault();
+        console.log(e);
         editButtonPackage.style.display = "none";
         packageDisplay.style.display = "none";
+        let itemsInReviewSection = reviewCheckoutDisplaySection.children
+        itemsInReviewSection.length = 0;
+        console.log(itemsInReviewSection);
+        while (itemsInReviewSection.length > 0) {
+            itemsInReviewSection[0].remove();
+        }
         packageToggle.style.display = "block";
     })
 
-
+    
     
 })
+
+
+let paymentCheckbox = document.querySelector("#payment-form-check-input");
+let cardNumber = document.querySelector("#card-number");
+let cardMonth = document.querySelector("#card-month");
+let cardYear = document.querySelector("#card-year");
+let cardSecurityCode = document.querySelector("#card-security-code");
+
+// paymentCheckbox = false;
+paymentCheckbox.addEventListener("click", function(e) {
+   if (e.target.checked) {
+       console.log("checked");
+       cardNumber.value = "8888 8888 8888 8888";
+       cardMonth.value = "01"
+       cardYear.value = "24"
+       cardSecurityCode.value = "123"
+   } else {
+       console.log("unchecked");
+       cardNumber.value = "";
+       cardMonth.value = "";
+       cardYear.value = "";
+       cardSecurityCode.value = "";
+   }
+})
+
 
 
 // let cartArray = JSON.parse(localStorage.getItem("shoe"))

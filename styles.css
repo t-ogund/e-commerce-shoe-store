@@ -699,8 +699,8 @@ img {
 .contact-display, .package-display {
     border: 1px solid black;
     margin-bottom: 10%;
-    line-height: .5rem;
-    padding: 10px;
+    line-height: 1.1rem;
+    /* padding: 2rem; */
 }
 
 .package-display-container {

@@ -68,19 +68,19 @@
                               <div class="form-row">
                                 <div class="form-group col-md-6">
                                   <label for="first-name">First*</label>
-                                  <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                                  <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                   <label for="last-name">Last*</label>
-                                  <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                                  <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
                                 </div>
                               </div>
                               <div class="form-group">
                                 <label for="email">E-Mail Address*</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@email.com">
+                                <input type="email" class="form-control" id="email" placeholder="you@email.com" required>
                               </div>
                               <div class="form-group">
-                                  <label for="phone">Telephone*</label>
+                                  <label for="phone">Telephone</label>
                                   <input type="text" class="form-control" id="phone" placeholder="000-000-0000">
                                 </div>
                                 
@@ -99,7 +99,9 @@
                             <div>
                                 <h2 class="package-title">2 Package Options</h2>
                             </div>
-    
+                            <div class="mt-3 mb-3">
+                              <h5>Ship To</h5>
+                            </div>
                             <div class="package-toggle">
                             <div class="form-row">
                               <div class="form-group col-md-6">
@@ -190,23 +192,23 @@
                                 
                             
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="form-check">
                                   <input class="form-check-input-package" type="checkbox" id="gridCheck-package">
                                   <label class="form-check-label" for="gridCheck">
                                     Business and shipping address are the same
                                   </label>
                                 </div>
-                            </div>
+                            </div> -->
                             
-                            <div class="checkout-display-section-package">
+                            <!-- <div class="checkout-display-section-package">
                                 <div class="checkout-display-image-package">
 
                                 </div>
                                 <div class="checkout-display-narrative-package">
                                     <p>name of shoe and size</p>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="form-row">
                                 <div class="form-group col-md-12">
@@ -343,19 +345,14 @@
                             <h2>Order Summary</h2>
                         </div>
                         <div class="subtotal-section">
-    
+                          <p class="subtotal"></p>
                         </div>
                         <div class="shipping-section">
-                            <p>Standard Shipping:</p>
-                            <p>3 - 5 Business Days</p>
-                        </div>
-                        <div class="discount-section">
-                            <p>Discounts: </p>
-                            <p>$0.00</p>
+                            <p></p>
+                            <p class="shipping-selection"></p>
                         </div>
                         <div class="final-total">
-                            <p>Total: </p>
-                            <p class="checkout-total"></p>
+                            <p class="checkout-total"></>
                         </div>
                     </div>
                 </div>

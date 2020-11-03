@@ -13,6 +13,7 @@ let alreadyAccount = document.querySelector(".already-account");
 
 saveAndContinueContact.addEventListener("click", function(e) {
     e.preventDefault();
+    
     contactToggle.style.display = "none";
     alreadyAccount.style.display = "none";
     let contactDisplay = document.createElement("div");
@@ -75,7 +76,8 @@ let shippingOptionPackage = document.querySelector("#shipping-option-package");
 
 saveAndContinuePackage.addEventListener("click", function(e) {
     e.preventDefault();
-    packageToggle.style.display = "none";
+    console.log("hi")
+    packageToggle.style.display = "none"; 
 
 
 
@@ -192,6 +194,7 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     reviewCheckoutDisplayItem.appendChild(reviewCheckoutImageSection);
     reviewCheckoutDisplayItem.appendChild(reviewCheckoutNarrative);
     reviewCheckoutDisplayItem.appendChild(reviewCheckoutItemPrice);
+    
 
 
         //review section
@@ -206,7 +209,34 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         shippingSelectionSection.appendChild(shippingOption);
 
         
+        let shippingSelection = document.querySelector(".shipping-selection");
+        // shippingSelection.textContent = `${shippingOptionPackage.options[shippingOptionPackage.selectedIndex].text}`;
+        let dollarAmount = shippingOption.textContent.slice(shippingOption.textContent.indexOf("$"), shippingOption.textContent.indexOf("(") -1);
+        shippingSelection.textContent = `Shipping: ${dollarAmount}`;
+        console.log(dollarAmount);
 
+    //shipping under review section
+    let reviewShippingContainer = document.createElement("div");
+    reviewShippingContainer.classList.add("review-shipping-container");
+    let reviewShipping = document.createElement("p");
+    reviewShipping.classList.add("review-shipping");
+    reviewShipping.textContent = `${shippingOptionPackage.options[shippingOptionPackage.selectedIndex].text}`
+    reviewCheckoutDisplaySection.appendChild(reviewShippingContainer);
+    reviewShippingContainer.appendChild(reviewShipping);
+    //shipping under review section
+
+    let subTotal = document.querySelector(".subtotal");
+    let subTotalArray = [];
+    for (let j = 0; j < cartArray.length; j++) {
+        subTotalArray.push(Number(cartArray[j].productPrice.slice(1)));
+    }
+    let sumSubTotalArray = subTotalArray.reduce(function(a, b) {
+        return a + b
+    }, 0);
+    subTotal.textContent = `Subtotal: $${sumSubTotalArray}.00`;
+
+    let checkoutTotal = document.querySelector(".checkout-total");
+    checkoutTotal.textContent = `Order total: $${Number(dollarAmount.slice(1)) + sumSubTotalArray}`;
 
 
     editButtonPackage.addEventListener("click", function(e) {

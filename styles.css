@@ -593,6 +593,10 @@ a:hover {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 .new-new-li {
     border: 1px solid black;
     padding: 20px;
@@ -688,8 +692,10 @@ img {
 } */
 
 .fixed-order-summary {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  /* display: flex;
+  justify-self: flex-end; */
+  /* display: none; */
 }
 
 .checkout {
@@ -840,6 +846,14 @@ img {
     height: 50px;
     width: 100%;
     justify-content: center;
+}
+
+.fixed-order-summary-container {
+    /* position: fixed; */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* width: 100%; */
+    /* background-color: purple; */
 }
 
 /* .gallery {

@@ -238,12 +238,21 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     let checkoutTotal = document.querySelector(".checkout-total");
     checkoutTotal.textContent = `Order total: $${Number(dollarAmount.slice(1)) + sumSubTotalArray}`;
 
+    let summaryContainer = document.querySelector(".summary-container");
+    let fixedOrderSummary = document.querySelector(".fixed-order-summary");
+    let placeOrderButton = document.createElement("button");
+    placeOrderButton.classList.add("btn", "btn-outline-secondary", "btn-lg", "btn-block");
+    placeOrderButton.textContent = "Place Order";
+    summaryContainer.appendChild(placeOrderButton);
+    summaryContainer.classList.remove("hide");
 
     editButtonPackage.addEventListener("click", function(e) {
         e.preventDefault();
         console.log(e);
         editButtonPackage.style.display = "none";
         packageDisplay.style.display = "none";
+        placeOrderButton.remove();
+        summaryContainer.classList.add("hide");
         let itemsInReviewSection = reviewCheckoutDisplaySection.children
         itemsInReviewSection.length = 0;
         console.log(itemsInReviewSection);
@@ -253,7 +262,6 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         packageToggle.style.display = "block";
     })
 
-    
     
 })
 

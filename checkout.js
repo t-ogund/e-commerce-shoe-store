@@ -10,17 +10,38 @@ let formContactSection = document.querySelector(".form-contact-section");
 let emailAddress = document.querySelector("#email");
 let phoneNumber = document.querySelector("#phone");
 let alreadyAccount = document.querySelector(".already-account");
+let contactInfo = document.querySelectorAll(".contact-info");
+let contactInfoLabel = document.querySelectorAll(".contact-info-label");
+
+cancelButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        // firstName.value = "";
+        // lastName.value = "";
+        // emailAddress.value = "";
+        // phone.value = "";
+        // console.log("cancel")
+        formContactSection.reset();
+    })
 
 saveAndContinueContact.addEventListener("click", function(e) {
-    e.preventDefault();
-    
+    // e.stopPropagation();
+
+    for (let i = 0; i < 1; i++) {
+        if (contactInfo[0].value < 1 || contactInfo[1].value < 1 || contactInfo[2].value < 1) {
+           console.log(contactInfoLabel[i], "is empty");
+        //    e.preventDefault();
+           contactToggle.style.display = "block";
+        // e.target.disabled = true;
+        } else {
+            e.preventDefault();
+            console.log(e);
     contactToggle.style.display = "none";
     alreadyAccount.style.display = "none";
     let contactDisplay = document.createElement("div");
     contactDisplay.classList.add("contact-display");
     let contactName = document.createElement("p");
-    firstName.textContent = firstName.value;
-    lastName.textContent = lastName.value;
+    firstName.textContent = firstName.value.charAt(0).toUpperCase() + firstName.value.slice(1);
+    lastName.textContent = lastName.value.charAt(0).toUpperCase() + lastName.value.slice(1);
     contactName.textContent = `${firstName.textContent} ${lastName.textContent}`;
     contactName.style.fontWeight = "700";
     console.log(contactName)
@@ -49,12 +70,16 @@ saveAndContinueContact.addEventListener("click", function(e) {
 
     cancelButton.addEventListener("click", function(e) {
         e.preventDefault();
-        firstName.value = "";
-        lastName.value = "";
-        emailAddress.value = "";
-        phone.value = "";
+        // firstName.value = "";
+        // lastName.value = "";
+        // emailAddress.value = "";
+        // phone.value = "";
         // console.log("cancel")
+        formContactSection.reset();
     })
+        }
+    }
+    console.log()
     
 })
 
@@ -71,11 +96,37 @@ let formPackageSection = document.querySelector(".form-package-section");
 let state = document.querySelector("#inputState-package");
 let displayPackageNarrative = document.querySelector(".checkout-display-narrative-package");
 let shippingOptionPackage = document.querySelector("#shipping-option-package");
+let contactInfoPackage = document.querySelectorAll(".package-contact-info");
+let cancelButtonPackage = document.querySelector(".cancel-package");
 
-
+cancelButtonPackage.addEventListener("click", function(e) {
+    e.preventDefault();
+    // firstNamePackage.value = "";
+    // lastNamePackage.value = "";
+    // addressOne.value = "";
+    // addressTwo.value = "";
+    // zipCode.value = "";
+    // city.value = "";
+    formPackageSection.reset();
+    // console.log("cancel")
+})
 
 saveAndContinuePackage.addEventListener("click", function(e) {
-    e.preventDefault();
+
+    for (let i = 0; i < 1; i++) {
+        if (contactInfoPackage[0].value < 1 || 
+            contactInfoPackage[1].value < 1 || 
+            contactInfoPackage[2].value < 1 ||
+            contactInfoPackage[4].value < 1 ||
+            contactInfoPackage[5].value < 1 ||
+            contactInfoPackage[6].value < 1) {
+            console.log(contactInfoPackage[i], "is empty");
+            console.log(contactInfoPackage[6])
+        //    e.preventDefault();
+           packageToggle.style.display = "block";
+        // e.target.disabled = true;
+        } else {
+            e.preventDefault();
     console.log("hi")
     packageToggle.style.display = "none"; 
 
@@ -87,21 +138,19 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     contactDisplayPackage.classList.add("contact-display-package");
     packageDisplay.appendChild(contactDisplayPackage);
     let contactNamePackage = document.createElement("p");
-    firstNamePackage.textContent = firstNamePackage.value;
-    lastNamePackage.textContent = lastNamePackage.value;
+    firstNamePackage.textContent = firstNamePackage.value.charAt(0).toUpperCase() + firstNamePackage.value.slice(1);
+    lastNamePackage.textContent = lastNamePackage.value.charAt(0).toUpperCase() + lastNamePackage.value.slice(1);
     contactNamePackage.textContent = `${firstNamePackage.textContent} ${lastNamePackage.textContent}`;
     contactNamePackage.style.fontWeight = "700";
 
     formPackageSection.appendChild(packageDisplay);
     let streetAddress = document.createElement("p");
     streetAddress.classList.add("street-address");
-    streetAddress.textContent = addressOne.value;
+    streetAddress.textContent = addressOne.value.toUpperCase();
     packageDisplay.appendChild(streetAddress);
     let cityStateZip = document.createElement("p");
     cityStateZip.classList.add("city-state-zip");
-    cityStateZip.textContent = `${city.value}, ${state.options[state.selectedIndex].text} ${zipCode.value}`;
-
-
+    cityStateZip.textContent = `${city.value.charAt(0).toUpperCase() + city.value.slice(1)}, ${state.options[state.selectedIndex].text} ${zipCode.value}`;
     contactDisplayPackage.appendChild(contactNamePackage);
     contactDisplayPackage.appendChild(streetAddress);
     contactDisplayPackage.appendChild(cityStateZip);
@@ -246,6 +295,8 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     summaryContainer.appendChild(placeOrderButton);
     summaryContainer.classList.remove("hide");
 
+
+
     editButtonPackage.addEventListener("click", function(e) {
         e.preventDefault();
         console.log(e);
@@ -261,6 +312,23 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         }
         packageToggle.style.display = "block";
     })
+
+    cancelButtonPackage.addEventListener("click", function(e) {
+        e.preventDefault();
+        // firstNamePackage.value = "";
+        // lastNamePackage.value = "";
+        // addressOne.value = "";
+        // addressTwo.value = "";
+        // zipCode.value = "";
+        // city.value = "";
+        formPackageSection.reset();
+        // console.log("cancel")
+    })
+        }
+        
+    } 
+
+    
 
     
 })
@@ -286,6 +354,7 @@ paymentCheckbox.addEventListener("click", function(e) {
        cardMonth.value = "";
        cardYear.value = "";
        cardSecurityCode.value = "";
+       state.value = "Select Your State";
    }
 })
 

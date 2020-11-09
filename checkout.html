@@ -51,7 +51,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 col-xs-6">
                     <div class="row">
                         <h1>Checkout</h1>
                     </div>
@@ -67,17 +67,17 @@
                             <div class="contact-toggle">
                               <div class="form-row">
                                 <div class="form-group col-md-6">
-                                  <label for="first-name">First*</label>
-                                  <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
+                                  <label for="first-name" class="contact-info-label">First*</label>
+                                  <input type="text" class="form-control contact-info" id="first-name" placeholder="First Name" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                  <label for="last-name">Last*</label>
-                                  <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+                                  <label for="last-name" class="contact-info-label">Last*</label>
+                                  <input type="text" class="form-control contact-info" id="last-name" placeholder="Last Name" required>
                                 </div>
                               </div>
                               <div class="form-group">
-                                <label for="email">E-Mail Address*</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@email.com" required>
+                                <label for="email" class="contact-info-label">E-Mail Address*</label>
+                                <input type="email" class="form-control contact-info" id="email" placeholder="you@email.com" required>
                               </div>
                               <div class="form-group">
                                   <label for="phone">Telephone</label>
@@ -87,7 +87,7 @@
                                 <div class="form-row button-section">
                                   <div class="form-group col-md-12">
                                       <button type="submit" class="btn btn-outline-dark cancel mr-2">Cancel</button>
-                                      <button type="submit" class="btn btn-dark save-and-continue ml-2">Save & Continue</button>
+                                      <button class="btn btn-dark save-and-continue ml-2">Save & Continue</button>
                                   </div>
                                 </div> 
                               </div>                      
@@ -106,17 +106,17 @@
                             <div class="form-row">
                               <div class="form-group col-md-6">
                                 <label for="first-name-package">First*</label>
-                                <input type="text" class="form-control" id="first-name-package" placeholder="First Name">
+                                <input type="text" class="form-control package-contact-info" id="first-name-package" placeholder="First Name" required>
                               </div>
                               <div class="form-group col-md-6">
                                 <label for="last-name-package">Last*</label>
-                                <input type="text" class="form-control" id="last-name-package" placeholder="Last Name">
+                                <input type="text" class="form-control package-contact-info" id="last-name-package" placeholder="Last Name" required>
                               </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress-package">Street Address 1*</label>
-                                    <input type="text" class="form-control" id="inputAddress-package" placeholder="1234 Main St">
+                                    <input type="text" class="form-control package-contact-info" id="inputAddress-package" placeholder="1234 Main St" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2-package">Address 2</label>
@@ -126,17 +126,17 @@
                             <div class="form-row shipping-address">
                                 <div class="form-group col-md-4">
                                     <label for="inputZip-package">Zip</label>
-                                    <input type="text" class="form-control" id="inputZip-package">
+                                    <input type="text" class="form-control package-contact-info" id="inputZip-package" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputCity-package">City</label>
-                                    <input type="text" class="form-control" id="inputCity-package">
+                                    <input type="text" class="form-control package-contact-info" id="inputCity-package" required>
                                 </div>
                                 
                                 <div class="form-group col-md-4">
                                     <label for="inputState-package">State</label>
-                                    <select id="inputState-package" class="form-control">
-                                      <option selected>Select Your State</option>
+                                    <select id="inputState-package" class="form-control package-contact-info" required>
+                                      <option value="">Select Your State</option>
                                       <option value="Alabama">Alabama</option>
                                       <option value="Alaska">Alaska</option>
                                       <option value="Arizona">Arizona</option>
@@ -213,8 +213,8 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                   <label for="shipping-option-package">When would you like this delivered?*</label>
-                                  <select id="shipping-option-package" class="form-control shipping-option-package">
-                                    <option selected>Choose...</option>
+                                  <select id="shipping-option-package" class="form-control shipping-option-package package-contact-info" required>
+                                    <option value="">Choose...</option>
                                     <option value="5 - 6 Business Days - $7.99 (USD)">5 - 6 Business Days - $7.99 (USD)</option>
                                     <option value="3 - 4 Business Days - $13.98 (USD)">3 - 4 Business Days - $13.98 (USD)</option>
                                     <option value="2 Business Days - $22.98 (USD)</">2 Business Days - $22.98 (USD)</option>
@@ -227,8 +227,8 @@
 
                             <div class="form-row button-section">
                                 <div class="form-group col-md-12">
-                                    <button type="submit" class="btn btn-outline-dark cancel mr-2">Cancel</button>
-                                    <button type="submit" class="btn btn-dark save-and-continue-package ml-2">Save & Continue</button>
+                                    <button type="submit" class="btn btn-outline-dark cancel-package mr-2">Cancel</button>
+                                    <button class="btn btn-dark save-and-continue-package ml-2">Save & Continue</button>
                                 </div>
                             </div>   
 
@@ -339,8 +339,8 @@
                     </div> -->
 
                 </div>
-                <div class="col-md-4 fixed-order-summary-container">
-                    <div class="col-md-12 bg-danger fixed-order-summary position-fixed-top">
+                <div class="col-md-4 col-xs-6 fixed-order-summary-container">
+                    <div class="col-md-12 fixed-order-summary">
                         <div class="order-summary-title">
                             <h2>Order Summary</h2>
                         </div>

@@ -692,10 +692,11 @@ img {
 } */
 
 .fixed-order-summary {
-  position: fixed;
+  /* position: fixed; */
   /* display: flex;
   justify-self: flex-end; */
   /* display: none; */
+ 
 }
 
 .checkout {
@@ -854,6 +855,7 @@ img {
     /* justify-content: flex-end; */
     /* width: 100%; */
     /* background-color: purple; */
+    height: 100%;
 }
 
 /* .gallery {

@@ -327,8 +327,16 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         // console.log("cancel")
     })
 
-    placeOrderButton.addEventListener("click", function() {
+    placeOrderButton.addEventListener("click", function(e) {
+        formContactSection.reset();
+        formPackageSection.reset();
         localStorage.clear();
+        cardNumber.value = "";
+        cardMonth.value = "";
+        cardYear.value = "";
+        cardSecurityCode.value = "";
+        state.value = "Select Your State";
+        // e.preventDefault();
     })
         }
         

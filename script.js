@@ -92,6 +92,7 @@ let myCart = JSON.parse(localStorage.getItem("shoe"));
 for (let i = 0; i < myCart.length; i++) {
   let cartRowItem = document.createElement("div");
   cartRowItem.classList.add("row", "cart-row-item");
+  cartRowItem.style.marginBottom = "10%"
   let newCartRowColOne = document.createElement("div");
   newCartRowColOne.classList.add("col-lg-4", "cart-left-column");
   let newCartRowColTwo = document.createElement("div");
@@ -275,3 +276,5 @@ shoeStore();
 //   })
 // }
 // saveAndContinue()
+
+

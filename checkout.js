@@ -292,7 +292,7 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     let placeOrderButton = document.createElement("a");
     placeOrderButton.setAttribute("href", "submitted.html");
     placeOrderButton.setAttribute("role", "button");
-    placeOrderButton.classList.add("btn", "btn-outline-secondary", "btn-lg", "btn-block");
+    placeOrderButton.classList.add("btn", "btn-outline-dark", "btn-lg", "btn-block");
     placeOrderButton.textContent = "Place Order";
     summaryContainer.appendChild(placeOrderButton);
     summaryContainer.classList.remove("hide");

@@ -289,7 +289,9 @@ saveAndContinuePackage.addEventListener("click", function(e) {
 
     let summaryContainer = document.querySelector(".summary-container");
     let fixedOrderSummary = document.querySelector(".fixed-order-summary");
-    let placeOrderButton = document.createElement("button");
+    let placeOrderButton = document.createElement("a");
+    placeOrderButton.setAttribute("href", "submitted.html");
+    placeOrderButton.setAttribute("role", "button");
     placeOrderButton.classList.add("btn", "btn-outline-secondary", "btn-lg", "btn-block");
     placeOrderButton.textContent = "Place Order";
     summaryContainer.appendChild(placeOrderButton);
@@ -323,6 +325,10 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         // city.value = "";
         formPackageSection.reset();
         // console.log("cancel")
+    })
+
+    placeOrderButton.addEventListener("click", function() {
+        localStorage.clear();
     })
         }
         

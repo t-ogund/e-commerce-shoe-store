@@ -692,11 +692,14 @@ img {
 } */
 
 .fixed-order-summary {
-  /* position: fixed; */
+  position: fixed;
   /* display: flex;
   justify-self: flex-end; */
   /* display: none; */
- 
+    /* width: 1%; */
+    /* background-color: red; */
+    /* overflow-x: hidden; */
+    /* height: 100vh; */
 }
 
 .checkout {
@@ -858,12 +861,15 @@ img {
 }
 
 .fixed-order-summary-container {
-    /* position: fixed; */
+    position: fixed;
     /* display: flex; */
     /* justify-content: flex-end; */
     /* width: 100%; */
     /* background-color: purple; */
-    height: 100%;
+    /* height: 100%; */
+    /* width: 20%; */
+    /* position: fixed; */
+
 }
 
 /* .gallery {
@@ -919,4 +925,48 @@ img {
     } */
 
     
+}
+
+.submitted {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.submit-line-1 {
+    animation-name: line-1;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line-1 {
+    0% {left: -400px; opacity: 0}
+    100% {left: 0px; opacity: 1}
+}
+
+.submit-line-2 {
+    animation-name: line-2;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line-2 {
+    0% {right: -400px; opacity: 0}
+    100% {right: 0px; opacity: 1}
+}
+
+.sub-back-home {
+    animation-name: back-home;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+@keyframes back-home {
+    0% {bottom: -100px; opacity: 0}
+    100% {bottom: 0px; opacity: 1}
 }

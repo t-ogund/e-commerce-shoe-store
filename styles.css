@@ -5,6 +5,7 @@
 
 body {
     padding: 0;
+    min-width: 272px;
 }
 
 .fa-heart {
@@ -37,6 +38,10 @@ body {
     background-position: center;
     background-size: cover;
     height: 400px;
+}
+
+.checkout-header {
+    margin-left: 12%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -645,6 +650,10 @@ img {
     width: 100%;
 }
 
+/* .might-like-container {
+    display: none;
+} */
+
 @media only screen and (max-width: 1200px) {
     .new-arrival-container {
         overflow-x: scroll;
@@ -886,7 +895,7 @@ img {
     height: 100vh;
 } */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .image-section {
         height: 100%;
         width: 20%;
@@ -980,7 +989,7 @@ img {
     margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
     .cart-header {
         font-size: 2rem;
     }
@@ -1025,4 +1034,7 @@ img {
         /* padding: 2% 0 2% 0; */
         margin-left: .5rem;
     }
+    /* .button-section {
+        min-width: 272px;
+    } */
 }

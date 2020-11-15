@@ -224,9 +224,19 @@ for (let s = 0; s < updatedPriceArray.length; s++) {
 total.textContent = `$${sum}.00`;
 
 let mightLikeContainer = document.querySelector(".might-like-container");
+let orderSummaryListChildren = orderSummaryList.children;
+
+for (let i = 0; i < orderSummaryListChildren.length; i++) {
+  if (orderSummaryListChildren[i].classList.contains("cart-row-item")) {
+    console.log("has it!");
+    mightLikeContainer.style.display = "block";
+  }
+}
+
+console.log(orderSummaryListChildren);
 if (orderSummaryList.length > 0) {
   console.log("hello");
-  // mightLikeContainer.classList.remove("hide");
+  mightLikeContainer.classList.remove("hide");
 }
 
 fetch("https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?concepts=H%2526M%20MAN&categories=men_all&currentpage=0&country=asia2&pagesize=30&lang=en", {

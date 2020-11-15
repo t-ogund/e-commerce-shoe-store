@@ -663,21 +663,30 @@ img {
 .new-arrival {
     min-width: 200px;
     height: 400px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: .1rem;
     /* margin: 10px; */
     /* border: 1px solid black; */
     /* background-color: green; */
 }
 
 .new-arrival-image {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 75%;
+    border-radius: 15px;
+}
+
+.new-image-arrival-source {
+    border-radius: 5px;
 }
 
 .new-arrival-card-text {
     padding: 5px;
     text-align: center;
     line-height: .9em;
-    border: 1px solid black;
+    /* border: 1px solid red; */
+    border-radius: 15px;
     height: 25%;
 }
 

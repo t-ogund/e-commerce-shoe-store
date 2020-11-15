@@ -372,6 +372,12 @@ paymentCheckbox.addEventListener("click", function(e) {
    }
 })
 
+cardNumber.addEventListener("keyup", function(e) {
+    console.log(e.keyCode)
+}) 
+
+
+
 
 
 // let cartArray = JSON.parse(localStorage.getItem("shoe"))

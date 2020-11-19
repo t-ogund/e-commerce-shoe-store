@@ -66,7 +66,7 @@ body {
     background-position: center;
     background-size: contain;
     object-fit: cover;
-    image-rendering: cover;
+    /* image-rendering: cover; */
 }
 
 .men-1 {
@@ -222,6 +222,8 @@ i {
 .card {
     margin: 1rem 0 .5rem 0;
     text-align: center;
+    padding: 0 .8rem 0 .8rem;
+    font-size: 1rem;
 }
 
 .row-1 {
@@ -682,14 +684,15 @@ img {
 }
 
 .new-arrival-card-text {
-    padding: 5px;
+    padding-top: 15px;
     text-align: center;
-    line-height: .9em;
-    border-left: 1px solid grey;
+    line-height: .3rem;
+    margin-top: 15px;
+    /* border-left: 1px solid grey;
     border-bottom: 1px solid grey;
-    border-right: 1px solid grey;
+    border-right: 1px solid grey; */
     border-radius: 0 0 10px 10px;
-    height: 25%;
+    height: 2%;
 }
 
 /* .shipping-address {
@@ -717,7 +720,7 @@ img {
 } */
 
 .fixed-order-summary {
-  position: fixed;
+  /* position: fixed; */
   /* display: flex;
   justify-self: flex-end; */
   /* display: none; */
@@ -725,6 +728,8 @@ img {
     /* background-color: red; */
     /* overflow-x: hidden; */
     /* height: 100vh; */
+    /* padding: 20%; */
+    
 }
 
 .checkout {
@@ -886,16 +891,34 @@ img {
 }
 
 .fixed-order-summary-container {
-    position: fixed;
+    /* position: fixed; */
     /* display: flex; */
     /* justify-content: flex-end; */
     /* width: 100%; */
     /* background-color: purple; */
-    /* height: 100%; */
-    /* width: 20%; */
+    /* height: 50vh; */
+    /* width: 75%; */
     /* position: fixed; */
+    /* padding: 20%; */
 
 }
+
+@media only screen and (max-width: 767px) {
+    .summary-container {
+        /* width: 75%; */
+        padding: 0 2.35em 0 2.35em;
+    }
+    .order-summary-title {
+        padding: 0 0 0 2.35rem;
+    }
+}
+
+
+
+/* .place-order-button {
+    position: fixed;
+    width: 10%;
+} */
 
 /* .gallery {
     display: flex;
@@ -905,6 +928,10 @@ img {
 /* .gallery {
     height: 100vh;
 } */
+
+@media only screen and (min-width: 767px) {
+
+}
 
 @media only screen and (max-width: 450px) {
     .image-section {
@@ -1048,4 +1075,26 @@ img {
     /* .button-section {
         min-width: 272px;
     } */
+}
+
+@media only screen and (max-width: 300px) {
+    .review-checkout-display-item {
+        padding: 0 5px 0 0 
+    }
+    .review-checkout-item-price {
+        display: none;
+    }
+    .review-checkout-narrative {
+        width: 60%;
+        padding-top: 1.5rem;
+    }
+    .narrative-section {
+        padding-top: 1.5rem;
+    }
+    .packaqge-details {
+        margin: 0;
+    }
+    .package-description {
+        margin-bottom: 0;
+    }
 }

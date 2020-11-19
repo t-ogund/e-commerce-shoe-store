@@ -62,7 +62,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-xs-6">
+                <div class="col-md-8 col-xs-6 bg-info">
                     <div class="row">
                         <h1 class="checkout-header">Checkout</h1>
                     </div>
@@ -222,7 +222,7 @@
                             </div> -->
 
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-12 ml-1">
                                   <label for="shipping-option-package">When would you like this delivered?*</label>
                                   <select id="shipping-option-package" class="form-control shipping-option-package package-contact-info" required>
                                     <option value="">Choose...</option>
@@ -254,20 +254,20 @@
                             </div>
                             <div class="form-group">
                               <label for="card-number">Enter Your Card Number</label>
-                              <input type="card-number" class="form-control" id="card-number" placeholder="Card Number">
+                              <input type="text" class="form-control card-number" id="card-number" placeholder="Card Number" onkeypress="return checkDigit(event)" maxlength="16">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="card-month"></label>
-                                    <input type="text" class="form-control" id="card-month" placeholder="MM*">
+                                    <input type="number" class="form-control" id="card-month" placeholder="MM*" min="01" max="12" maxlength="2">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="card-year"></label>
-                                    <input type="text" class="form-control" id="card-year" placeholder="YY*">
+                                    <input type="number" class="form-control" id="card-year" placeholder="YY*" min="01" max="99" maxlength="2">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="card-security-code"></label>
-                                    <input type="text" class="form-control" id="card-security-code" placeholder="CSC*">
+                                    <input type="number" class="form-control" id="card-security-code" placeholder="CSC*" min="01" max="999" maxlength="3">
                                 </div>
                                 <div class="form-group">
                                     <div class="form-check">
@@ -350,8 +350,8 @@
                     </div> -->
 
                 </div>
-                <div class="col-md-4 col-xs-6 fixed-order-summary-container">
-                    <div class="col-md-12 fixed-order-summary">
+                <div class="col-md-4 col-xs-6 fixed-order-summary-container bg-warning">
+                    <div class="col-md-12 fixed-order-summary position-relative">
                         <div class="order-summary-title">
                             <h2>Order Summary</h2>
                         </div>
@@ -365,6 +365,9 @@
                           </div>
                           <div class="final-total">
                               <p class="checkout-total"></>
+                          </div>
+                          <div class="payment-reminder">
+                            <p class="payment-text hide"></p>
                           </div>
                         </div>
                     </div>

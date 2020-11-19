@@ -292,7 +292,7 @@ saveAndContinuePackage.addEventListener("click", function(e) {
     let placeOrderButton = document.createElement("a");
     placeOrderButton.setAttribute("href", "submitted.html");
     placeOrderButton.setAttribute("role", "button");
-    placeOrderButton.classList.add("btn", "btn-outline-dark", "btn-lg", "btn-block");
+    placeOrderButton.classList.add("btn", "btn-outline-dark", "btn-lg", "btn-block", "place-order-button");
     placeOrderButton.textContent = "Place Order";
     summaryContainer.appendChild(placeOrderButton);
     summaryContainer.classList.remove("hide");
@@ -327,16 +327,35 @@ saveAndContinuePackage.addEventListener("click", function(e) {
         // console.log("cancel")
     })
 
+    let editButton = document.querySelectorAll(".edit-button");
+    let paymentText = document.querySelector(".payment-text")
     placeOrderButton.addEventListener("click", function(e) {
-        formContactSection.reset();
-        formPackageSection.reset();
-        localStorage.clear();
-        cardNumber.value = "";
-        cardMonth.value = "";
-        cardYear.value = "";
-        cardSecurityCode.value = "";
-        state.value = "Select Your State";
-        // e.preventDefault();
+        if (cardNumber.value.length < 16) {
+            paymentText.textContent = "Please enter 16 digit (fictional) card number.";
+            paymentText.style.color = "red";
+            paymentText.classList.remove("hide");
+            e.preventDefault();
+            console.log("edit button length:", editButton.length)
+
+        } 
+        else {
+            paymentText.classList.add("hide");
+            formContactSection.reset();
+            formPackageSection.reset();
+            localStorage.clear();
+            cardNumber.value = "";
+            cardMonth.value = "";
+            cardYear.value = "";
+            cardSecurityCode.value = "";
+            state.value = "Select Your State";
+            // e.preventDefault();
+        }
+        // if (editButton.length !== 2) {
+        //     e.preventDefault();
+        // }
+
+        
+        
     })
         }
         
@@ -372,11 +391,69 @@ paymentCheckbox.addEventListener("click", function(e) {
    }
 })
 
-cardNumber.addEventListener("keyup", function(e) {
-    console.log(e.keyCode)
-}) 
+function checkDigit(event) {
+    var code = (event.which) ? event.which : event.keyCode;
 
+    if ((code < 48 || code > 57) && (code > 31)) {
+        return false;
+    }
 
+    return true;
+}
+console.log(cardNumber.value)
+// let newCardNumber = [];
+// cardNumber.addEventListener("keyup", function(e) {
+    
+//     // for (let i = 0; i < 16; i++) {
+//         // for (let i = 0; i < newCardNumber.length; i++) {
+//     for (let i = 48; i < 57; i++) {
+
+//         if (e.keyCode >= i && e.keyCode <= i) {
+            
+//             console.log("success ", e.keyCode.value)
+//             console.log(e.keyCode);
+//             cardNumber.value = e.key;
+//             newCardNumber.push(e.key);
+//             if (newCardNumber.length > 20) {
+//                 newCardNumber.pop();
+//             }
+//         } 
+//     // else {
+//     //     console.log(e.keyCode)
+//     //     // console.log("womp womp", e.keyCode)
+//     // }
+// // }
+        
+// }
+
+//     console.log(newCardNumber);
+
+// // }
+// // console.log(e.keyCode)
+// if (e.keyCode === 8) {
+//     newCardNumber.pop();
+// }
+// cardNumber.value = newCardNumber.join("");
+
+   
+// }) 
+
+// function cc_format(value) {
+//     var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+//     var matches = v.match(/\d{4,16}/g);
+//     var match = matches && matches[0] || ''
+//     var parts = []
+
+//     for (i=0, len=match.length; i<len; i+=4) {
+//         parts.push(match.substring(i, i+4))
+//     }
+
+//     if (parts.length) {
+//         return parts.join(' ')
+//     } else {
+//         return value
+//     }
+// }
 
 
 
